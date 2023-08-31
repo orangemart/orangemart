@@ -22,14 +22,11 @@ const Header = () => {
           {NAV_LINKS.map((link: ILink) => {
             const { id, href, label, hasDefaultTarget } = link;
             const isActive = pathname === href;
+            const className = isActive ? styles.navActiveLink : styles.navLink;
 
             if (hasDefaultTarget) {
               return (
-                <Link
-                  href={href}
-                  key={id}
-                  className={isActive ? styles.navActiveLink : styles.navLink}
-                >
+                <Link key={id} href={href} className={className}>
                   {label}
                 </Link>
               );

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./styles.module.css";
 import { ILink } from "@/app/types";
 
@@ -5,7 +6,7 @@ export const FundBtn = (props: ILink) => {
   const { id, href, label } = props;
 
   return (
-    <a
+    <Link
       key={id}
       className={styles.fundBtn}
       href={href}
@@ -13,7 +14,7 @@ export const FundBtn = (props: ILink) => {
       rel="noreferrer"
     >
       {label}
-    </a>
+    </Link>
   );
 };
 
