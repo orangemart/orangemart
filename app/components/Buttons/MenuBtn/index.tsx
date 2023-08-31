@@ -6,7 +6,7 @@ import { useState } from "react";
 
 import styles from "./styles.module.css";
 import { ILink } from "@/app/types";
-import { NAV_LINKS } from "@/app/utils/constants";
+import { NAV_LINKS, SOCIAL_LINKS } from "@/app/utils/constants";
 
 import Asset from "@/app/components/Asset";
 import Logo from "@/app/components/Logo";
@@ -43,32 +43,34 @@ export const MenuBtn = () => {
                 {NAV_LINKS.map((link: ILink) => {
                   const { id, href, label, hasDefaultTarget } = link;
                   const isActive = pathname === href;
+                  const className = hasDefaultTarget
+                    ? isActive
+                      ? styles.menuActiveLink
+                      : styles.menuLink
+                    : styles.menuExternalLink;
+                  const target = hasDefaultTarget ? "_self" : "_blank";
 
-                  if (hasDefaultTarget) {
-                    return (
-                      <Link
-                        href={href}
-                        key={id}
-                        className={
-                          isActive ? styles.menuActiveLink : styles.menuLink
-                        }
-                      >
-                        {label}
-                      </Link>
-                    );
-                  } else {
-                    return (
-                      <a
-                        key={id}
-                        className={styles.menuExternalLink}
-                        href={href}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {label}
-                      </a>
-                    );
-                  }
+                  return (
+                    <Link
+                      href={href}
+                      key={id}
+                      className={className}
+                      target={target}
+                    >
+                      {label}
+                    </Link>
+                  );
+                })}
+              </div>
+              <div className={styles.menuModalSocial}>
+                {SOCIAL_LINKS.map((link: ILink) => {
+                  const { id, href } = link;
+
+                  return (
+                    <Link href={href} key={id}>
+                      <Asset name={id} size={28} color="var(--medium)" />
+                    </Link>
+                  );
                 })}
               </div>
             </div>
