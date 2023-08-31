@@ -8,6 +8,13 @@
   --darkest: #0E1117;
   --max-width: 1280px;
   --border-radius: 8px;
+  --size-xxs: 4px;
+  --size-xs: 8px;
+  --size-sm: 16px;
+  --size-md: 24px;
+  --size-lg: 32px;
+  --size-xl: 40px;
+  --size-xxl: 80px;
 }
 
 * {
@@ -47,7 +54,6 @@ h3 {
 
 h4 {
   font-size: 22px;
-
 }
 
 h1,
@@ -69,7 +75,8 @@ code,
 ul,
 li,
 ol,
-span {
+span,
+button {
   font-size: 18px;
   font-weight: normal;
   line-height: 1.6;
