@@ -3,18 +3,13 @@ import styles from "./styles.module.css";
 import { ILink } from "@/app/types";
 
 export const FundBtn = (props: ILink) => {
-  const { href, label } = props;
+	const { href, label } = props;
 
-  return (
-    <Link
-      className={styles.fundBtn}
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-    >
-      {label}
-    </Link>
-  );
+	return (
+		<Link className={styles.fundBtn} href={href} target="_blank" rel="noreferrer">
+			{label}
+		</Link>
+	);
 };
 
 export default FundBtn;
