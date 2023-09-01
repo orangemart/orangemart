@@ -13,7 +13,7 @@ import Logo from "@/app/components/Logo";
 
 export const MenuBtn = () => {
   const pathname = usePathname();
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
 
   const openMenu = () => {
     setShowMenu(true);
