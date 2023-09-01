@@ -32,8 +32,8 @@ export default function Home() {
                 Our objective is simple - we want to help people learn to
                 survive and thrive with Bitcoin. We recognize that Bitcoin is an
                 essential tool for survival and believe a great way to learn
-                about it is by playing with it. Join our community and take the
-                Bitcoin Repopulation Unit Survival Test (B.R.U.S.T)
+                about it is by playing with it. Join our community to get
+                started.
               </p>
               <LinkBtn
                 id="join"
@@ -51,6 +51,32 @@ export default function Home() {
                 height={225}
                 priority
               />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className={styles.videoSection}>
+        <div className="wrapper">
+          <div className={styles.videoWrapper}>
+            <div className={styles.videoContent}>
+              <h3>
+                At <span>Orange</span>
+                <span></span> anyone can play and earn Bitcoin
+              </h3>
+              <p>
+                Join the server and take the Bitcoin Repopulation Unit Survival
+                Test (B.R.U.S.T)
+              </p>
+              <PlayBtn />
+            </div>
+            <div className={styles.videoImage}>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/m3I9CWMRf4Y?si=mE7chiHzeWEcZCNy?controls=0&rel=0&iv_load_policy=0"
+                title="YouTube video player"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
         </div>
