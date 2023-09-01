@@ -20,3 +20,13 @@ export interface ILinkGroup {
   title: string;
   links: ILink[];
 }
+
+export interface IPostCard {
+  id: string;
+  title: string;
+  topics: string[];
+  authors: string;
+  description: string;
+  pubDate: string;
+  heroImage: string;
+}

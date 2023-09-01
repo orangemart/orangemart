@@ -1,9 +1,45 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import PlayBtn from "./components/Buttons/PlayBtn";
-import LinkBtn from "./components/Buttons/LinkBtn";
+import { PlayBtn, LinkBtn } from "./components/Buttons";
+import PostCard from "./components/PostCard";
+
+import { IPostCard } from "./types";
 
 export default function Home() {
+  // TODO: replace dummy data with real data
+  const posts: IPostCard[] = [
+    {
+      id: "1",
+      title: "Compete to earn Bitcoin on the Orange Rust server",
+      topics: ["rust", "orange", "bitcoin"],
+      authors: "orangemart",
+      description:
+        "Find Blood in locked crates on the Orange Rust server and trade in for bitcoin at the Blood Bank.",
+      pubDate: "May 11 2023",
+      heroImage: "/img/orangewantsyou.jpg",
+    },
+    {
+      id: "1s",
+      title: "Orange Rust server is live",
+      topics: ["rust", "orange", "bitcoin"],
+      authors: "orangemart",
+      description:
+        "The Orange Rust server is live. Join the server and take the Bitcoin Repopulation Unit Survival Test (B.R.U.S.T)",
+      pubDate: "May 11 2023",
+      heroImage: "/img/twitchdrops.jpg",
+    },
+    {
+      id: "1f",
+      title: "Orange Rust server is live",
+      topics: ["rust", "orange", "bitcoin"],
+      authors: "orangemart",
+      description:
+        "The Orange Rust server is live. Join the server and take the Bitcoin Repopulation Unit Survival Test (B.R.U.S.T)",
+      pubDate: "May 11 2023",
+      heroImage: "/img/orangemap.jpg",
+    },
+  ];
+
   return (
     <div className="container">
       <section className={styles.heroSection}>
@@ -55,14 +91,34 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className={styles.postsSection}>
+        <div className="wrapper">
+          <div className={styles.postsWrapper}>
+            <div className={styles.postsHead}>
+              <h2>Latest posts</h2>
+              <LinkBtn
+                id="posts"
+                href="/blog"
+                label="View all"
+                hasDefaultTarget={true}
+              />
+            </div>
+            <div className={styles.postsBody}>
+              {posts.map((post: IPostCard) => {
+                return <PostCard key={post.id} {...post} />;
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
       <section className={styles.videoSection}>
         <div className="wrapper">
           <div className={styles.videoWrapper}>
             <div className={styles.videoContent}>
-              <h3>
+              <h2>
                 At <span>Orange</span>
                 <span></span> anyone can play and earn Bitcoin
-              </h3>
+              </h2>
               <p>
                 Join the server and take the Bitcoin Repopulation Unit Survival
                 Test (B.R.U.S.T)
