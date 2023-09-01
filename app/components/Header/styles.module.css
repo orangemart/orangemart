@@ -6,7 +6,7 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 0;
+  z-index: 1;
 }
 
 .header nav {
@@ -29,7 +29,6 @@
   align-items: center;
   justify-content: center;
   color: var(--medium);
-  font-weight: 500;
   min-height: 100%;
   text-decoration: none;
 }
@@ -43,7 +42,7 @@
   color: var(--darkest);
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
 
   .header .navLinks {
     display: flex;
