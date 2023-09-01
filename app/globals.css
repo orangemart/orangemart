@@ -28,7 +28,7 @@ body {
   background-color: var(--white);
   color: var(--darkest);
   max-width: 100vw;
-  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -80,6 +80,10 @@ button {
   font-size: 18px;
   font-weight: normal;
   line-height: 1.6;
+}
+
+iframe {
+  border: none;
 }
 
 .main {
