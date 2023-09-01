@@ -4,12 +4,11 @@ import { ILink } from "@/app/types";
 import Asset from "@/app/components/Asset";
 
 export const LinkBtn = (props: ILink) => {
-  const { id, href, label, hasDefaultTarget } = props;
+  const { href, label, hasDefaultTarget } = props;
   const target = hasDefaultTarget ? "_self" : "_blank";
 
   return (
     <Link
-      key={id}
       className={styles.linkBtn}
       href={href}
       target={target}

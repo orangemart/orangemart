@@ -31,7 +31,7 @@ const Header = () => {
                 </Link>
               );
             } else {
-              return <FundBtn {...link} />;
+              return <FundBtn key={id} {...link} />;
             }
           })}
         </div>
