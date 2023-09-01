@@ -1,5 +1,7 @@
 import { ILink } from "../types";
 
+export const RUST_SERVER_IP = "104.129.133.89:28116";
+
 export const NAV_LINKS: ILink[] = [
   {
     id: "about",
@@ -66,4 +68,36 @@ export const SOCIAL_LINKS: ILink[] = [
   },
 ];
 
-export const RUST_SERVER_IP = "104.129.133.89:28116";
+export const RESOURCE_LINKS: ILink[] = [
+  {
+    id: "goodmorningbitcoin",
+    label: "GMB Radio",
+    href: "https://www.goodmorningbitcoin.com/",
+    hasDefaultTarget: false,
+  },
+  {
+    id: "whitepaper",
+    label: "Bitcoin Whitepaper",
+    href: "https://bitcoin.org/bitcoin.pdf",
+    hasDefaultTarget: false,
+  },
+  {
+    id: "rust",
+    label: "Rust",
+    href: "https://rust.facepunch.com/",
+    hasDefaultTarget: false,
+  },
+];
+
+export const FOOTER_LINKS = [
+  {
+    id: "orange",
+    title: "Orange",
+    links: NAV_LINKS,
+  },
+  {
+    id: "resources",
+    title: "Resources",
+    links: RESOURCE_LINKS,
+  },
+];
