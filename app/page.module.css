@@ -56,7 +56,7 @@
 /* ~~ VIDEO SECTION ~~ */
 .videoSection {
   background-color: var(--dark);
-  padding: 80px 16px;
+  padding: 40px 16px;
 }
 
 .videoSection h3 {
@@ -132,17 +132,18 @@
   /* ~~ VIDEO SECTION ~~ */
   .videoWrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: var(--size-xxl);
+    padding: var(--size-xl);
   }
 
   .videoImage {
-    display: block;
+    display: flex;
   }
 
   .videoImage iframe {
-    width: 560px;
-    height: 315px;
+    width: 360px;
+    height: 200px;
   }
 }
