@@ -1,0 +1,12 @@
+.playBtn {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: var(--border-radius);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  padding: var(--size-xs) var(--size-sm);
+  text-decoration: none;
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+.linkBtn {
+  display: flex;
+  align-items: center;
+  gap: var(--size-xxs);
+  font-weight: 600;
+}

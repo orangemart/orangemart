@@ -1,0 +1,29 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--size-xs);
+  text-decoration: none;
+  padding: var(--size-sm);
+}
+
+.logo span {
+  display: none;
+  font-size: 28px;
+}
+
+.logo span:first-child {
+  color: var(--darkest);
+  font-weight: bold;
+}
+
+.logo span:last-child {
+  color: var(--dark);
+}
+
+@media (min-width: 768px) {
+
+  .logo span {
+    display: inline-block;
+  }
+}

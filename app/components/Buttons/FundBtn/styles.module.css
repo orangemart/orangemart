@@ -1,0 +1,11 @@
+.fundBtn {
+  border: 1px solid var(--primary);
+  backdrop-filter: blur(2px);
+  border-radius: var(--border-radius);
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: normal;
+  padding: var(--size-xs) var(--size-sm);
+  text-decoration: none;
+}
