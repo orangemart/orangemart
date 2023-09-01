@@ -1,10 +1,54 @@
+.heroSection,
+.heroBackground {
+  background-image: url("/assets/hero.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.heroContent {
+  width: 100%;
+  padding: 160px 16px 80px 16px;
+}
+
+.heroContent p {
+  text-shadow: 1px 1px 2px var(--white);
+}
+
+.heroContent div:first-child {
+  color: var(--medium);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: var(--size-xs);
+  text-transform: uppercase;
+}
+
+.heroContent div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--size-md);
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {}
 
 @media (prefers-reduced-motion) {}
 
 /* Mobile */
-@media (max-width: 700px) {}
+@media (min-width: 768px) {}
 
 /* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {}
+@media (min-width: 768px) and (max-width: 968px) {}
+
+/* Desktop */
+@media (min-width: 968px) {
+  .heroContent {
+    max-width: 50%;
+    padding: 240px 16px 160px 16px;
+  }
+}

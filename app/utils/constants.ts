@@ -65,3 +65,5 @@ export const SOCIAL_LINKS: ILink[] = [
     hasDefaultTarget: false,
   },
 ];
+
+export const RUST_SERVER_IP = "104.129.133.89:28116";
