@@ -14,3 +14,9 @@ export interface IAsset {
 export type TIcon = {
   color: string;
 };
+
+export interface ILinkGroup {
+  id: string;
+  title: string;
+  links: ILink[];
+}

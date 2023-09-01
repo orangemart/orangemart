@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./styles.module.css";
-import { ILink } from "@/app/types";
+import { ILink, ILinkGroup } from "@/app/types";
 import { FOOTER_LINKS, SOCIAL_LINKS } from "@/app/utils/constants";
 
 import Logo from "@/app/components/Logo";
@@ -13,14 +13,14 @@ const Footer = () => {
         <div className={styles.footerTopWrapper}>
           <Logo />
           <div className={styles.footerLinks}>
-            {FOOTER_LINKS.map((link) => {
+            {FOOTER_LINKS.map((link: ILinkGroup) => {
               const { id, title, links } = link;
 
               return (
                 <div key={id} className={styles.footerLinker}>
                   <div className={styles.footerLinkTitle}>{title}</div>
                   <div>
-                    {links.map((link: ILink, _) => {
+                    {links.map((link: ILink) => {
                       const { id, href, label, hasDefaultTarget } = link;
                       const target = hasDefaultTarget ? "_self" : "_blank";
                       return (

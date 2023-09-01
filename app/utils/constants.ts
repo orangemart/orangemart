@@ -1,4 +1,4 @@
-import { ILink } from "../types";
+import { ILink, ILinkGroup } from "../types";
 
 export const RUST_SERVER_IP = "104.129.133.89:28116";
 
@@ -89,7 +89,7 @@ export const RESOURCE_LINKS: ILink[] = [
   },
 ];
 
-export const FOOTER_LINKS = [
+export const FOOTER_LINKS: ILinkGroup[] = [
   {
     id: "orange",
     title: "Orange",
