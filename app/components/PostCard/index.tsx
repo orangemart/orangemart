@@ -19,7 +19,8 @@ export const PostCard = (props: IPostCard) => {
 					alt={title}
 					width={300}
 					height={200}
-					layout="responsive"
+					blurDataURL={heroImage}
+					placeholder="blur"
 				/>
 			</div>
 			<div className={styles.postCardContent}>

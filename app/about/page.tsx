@@ -62,6 +62,7 @@ const AboutPage = async () => {
 						width={300}
 						height={200}
 						layout="responsive"
+						priority
 					/>
 					<div className={styles.aboutPagePromo}>
 						<div>

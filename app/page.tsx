@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { PlayBtn, LinkBtn } from "./components/Buttons";
-import PostCard from "./components/PostCard";
+import PostCard from "@/app/components/PostCard";
 
 import { IPostCard } from "./types";
 
@@ -44,17 +44,27 @@ export default function Home() {
 		<div className="container">
 			<section className={styles.heroSection}>
 				<div className={styles.heroBackground}>
-					<div className="wrapper">
-						<div className={styles.heroContent}>
-							<div>Play and Earn</div>
-							<div>
-								<h1>Your journey starts here</h1>
-								<p>
-									Learn about financial freedom in a fun and engaging way by playing your favorite
-									game RUST and earning real Bitcoin
-								</p>
-								<PlayBtn />
-							</div>
+					<Image
+						src="/assets/hero.png"
+						alt="background"
+						className="cover"
+						blurDataURL="/assets/hero.png"
+						placeholder="blur"
+						width={2620}
+						height={970}
+						priority
+					/>
+				</div>
+				<div className="wrapper">
+					<div className={styles.heroContent}>
+						<div>Play and Earn</div>
+						<div>
+							<h1>Your journey starts here</h1>
+							<p>
+								Learn about financial freedom in a fun and engaging way by playing your favorite
+								game RUST and earning real Bitcoin
+							</p>
+							<PlayBtn />
 						</div>
 					</div>
 				</div>
@@ -78,14 +88,7 @@ export default function Home() {
 							/>
 						</div>
 						<div className={styles.aboutImage}>
-							<Image
-								src="/assets/flag.png"
-								alt="flag"
-								className="cover"
-								width={400}
-								height={225}
-								priority
-							/>
+							<Image src="/assets/flag.png" alt="flag" className="cover" width={400} height={225} />
 						</div>
 					</div>
 				</div>
@@ -123,7 +126,7 @@ export default function Home() {
 								width="560"
 								height="315"
 								src="https://www.youtube.com/embed/m3I9CWMRf4Y?si=mE7chiHzeWEcZCNy?controls=0&rel=0&iv_load_policy=0"
-								title="YouTube video player"
+								title="Welcome to Orange"
 								allowFullScreen></iframe>
 						</div>
 					</div>
