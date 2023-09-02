@@ -14,28 +14,27 @@ export default function Home() {
 			topics: ["rust", "orange", "bitcoin"],
 			authors: "orangemart",
 			description:
-				"Find Blood in locked crates on the Orange Rust server and trade in for bitcoin at the Blood Bank.",
-			pubDate: "May 11 2023",
+				"Find Blood in locked crates on the Orange Rust server and trade in for bitcoin at the Blood Bank",
+			pubDate: "Jun 12, 2023",
 			heroImage: "/img/orangewantsyou.jpg",
 		},
 		{
 			id: "1s",
-			title: "Orange Rust server is live",
+			title:
+				"Unlock Free Rust Skins through Twitch Drops and Earn Bitcoin on the Innovative Orange Server",
 			topics: ["rust", "orange", "bitcoin"],
 			authors: "orangemart",
-			description:
-				"The Orange Rust server is live. Join the server and take the Bitcoin Repopulation Unit Survival Test (B.R.U.S.T)",
+			description: "Watch streamers to unlock unique skins",
 			pubDate: "May 11 2023",
 			heroImage: "/img/twitchdrops.jpg",
 		},
 		{
 			id: "1f",
-			title: "Orange Rust server is live",
+			title: "How to join the Orange server in Rust",
 			topics: ["rust", "orange", "bitcoin"],
 			authors: "orangemart",
-			description:
-				"The Orange Rust server is live. Join the server and take the Bitcoin Repopulation Unit Survival Test (B.R.U.S.T)",
-			pubDate: "May 11 2023",
+			description: "Boot up your own rust server for free",
+			pubDate: "May 8, 2023",
 			heroImage: "/img/orangemap.jpg",
 		},
 	];

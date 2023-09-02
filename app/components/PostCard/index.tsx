@@ -12,21 +12,21 @@ export const PostCard = (props: IPostCard) => {
 
 	return (
 		<div className={styles.postCard}>
+			<div className={styles.postCardContent}>
+				<h3>{title}</h3>
+				<p>{description}</p>
+				<LinkBtn id={href} href={href} label="Read post" hasDefaultTarget={true} />
+			</div>
 			<div className={styles.postCardImage}>
 				<Image
 					className="cover"
 					src={heroImage}
 					alt={title}
-					width={300}
-					height={200}
+					width={720}
+					height={360}
 					blurDataURL={heroImage}
 					placeholder="blur"
 				/>
-			</div>
-			<div className={styles.postCardContent}>
-				<h3>{title}</h3>
-				<p>{description}</p>
-				<LinkBtn id={href} href={href} label="Read More" hasDefaultTarget={true} />
 			</div>
 		</div>
 	);
