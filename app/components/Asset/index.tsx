@@ -13,38 +13,38 @@ import { TikTokIcon } from "@/app/components/Icons/TikTokIcon";
 import { DiscordIcon } from "@/app/components/Icons/DiscordIcon";
 
 const renderAssetByName = (name: string, color: string) => {
-  switch (name) {
-    case "menu":
-      return <MenuIcon color={color} />;
-    case "close":
-      return <CloseIcon color={color} />;
-    case "arrow-right":
-      return <ArrowRightIcon color={color} />;
-    case "youtube":
-      return <YoutubeIcon color={color} />;
-    case "tiktok":
-      return <TikTokIcon color={color} />;
-    case "twitter":
-      return <TwitterIcon color={color} />;
-    case "twitch":
-      return <TwitchIcon color={color} />;
-    case "nostr":
-      return <NostrIcon color={color} />;
-    case "discord":
-      return <DiscordIcon color={color} />;
-    default:
-      return null;
-  }
+	switch (name) {
+		case "menu":
+			return <MenuIcon color={color} />;
+		case "close":
+			return <CloseIcon color={color} />;
+		case "arrow-right":
+			return <ArrowRightIcon color={color} />;
+		case "youtube":
+			return <YoutubeIcon color={color} />;
+		case "tiktok":
+			return <TikTokIcon color={color} />;
+		case "twitter":
+			return <TwitterIcon color={color} />;
+		case "twitch":
+			return <TwitchIcon color={color} />;
+		case "nostr":
+			return <NostrIcon color={color} />;
+		case "discord":
+			return <DiscordIcon color={color} />;
+		default:
+			return null;
+	}
 };
 
 const Asset = (props: IAsset) => {
-  const { name, size, color } = props;
+	const { name, size, color } = props;
 
-  return (
-    <div className={styles.asset} style={{ width: size, height: size }}>
-      {renderAssetByName(name, color)}
-    </div>
-  );
+	return (
+		<div className={styles.asset} style={{ width: size, height: size }}>
+			{renderAssetByName(name, color)}
+		</div>
+	);
 };
 
 export default Asset;
