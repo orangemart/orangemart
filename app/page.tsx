@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { PlayBtn, LinkBtn } from "./components/Buttons";
-import PostCard from "@/app/components/PostCard";
+import { PostCard } from "@/app/components/Cards";
 
 import { IPostCard } from "./types";
 
