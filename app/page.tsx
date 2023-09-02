@@ -72,7 +72,7 @@ export default function Home() {
 							</p>
 							<LinkBtn
 								id="join"
-								href="https://www.youtube.com/@orangemart"
+								href="https://dsc.gg/orangemart"
 								label="Join community"
 								hasDefaultTarget={false}
 							/>
