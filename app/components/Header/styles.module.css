@@ -4,7 +4,6 @@
   border-bottom: 1px solid var(--light);
   width: 100%;
   height: 80px;
-  padding: var(--size-sm);
   position: fixed;
   top: 0px;
   left: 0px;
@@ -18,6 +17,7 @@
   margin: 0 auto;
   max-width: var(--max-width);
   min-height: 100%;
+  padding: var(--size-sm);
 }
 
 .header .headerLinks {

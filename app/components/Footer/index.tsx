@@ -40,7 +40,7 @@ const Footer = () => {
 			</div>
 			<div className={styles.footerBottom}>
 				<div className={styles.footerBotWrapper}>
-					<span>@2023 All rights reserved.</span>
+					<span>&copy; 2023 All rights reserved.</span>
 					<div className={styles.footerSocial}>
 						{SOCIAL_LINKS.map((link: ILink) => {
 							const { id, href, hasDefaultTarget } = link;

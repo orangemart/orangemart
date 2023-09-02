@@ -45,16 +45,13 @@
   text-decoration: underline;
 }
 
-.footerBottom {
-  padding: var(--size-md) var(--size-sm);
-}
-
 .footerBotWrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
   gap: var(--size-sm);
+  padding: var(--size-md) var(--size-sm);
 }
 
 .footerBottom span {
