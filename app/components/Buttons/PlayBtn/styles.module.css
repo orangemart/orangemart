@@ -2,7 +2,7 @@
   background-color: var(--primary);
   border: 1px solid var(--primary);
   border-radius: var(--border-radius);
-  color: var(--dark);
+  color: var(--white);
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
