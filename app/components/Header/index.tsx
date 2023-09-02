@@ -16,9 +16,10 @@ const Header = () => {
 	return (
 		<header className={styles.header}>
 			<nav>
-				<Logo />
-				<MenuBtn />
-				<div className={styles.navLinks}>
+				<div className={styles.headerLogo}>
+					<Logo />
+				</div>
+				<div className={styles.headerLinks}>
 					{NAV_LINKS.map((link: ILink) => {
 						const { id, href, label, hasDefaultTarget } = link;
 						const isActive = pathname === href;
@@ -35,6 +36,7 @@ const Header = () => {
 						}
 					})}
 				</div>
+				<MenuBtn />
 			</nav>
 		</header>
 	);

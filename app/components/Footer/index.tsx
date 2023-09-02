@@ -11,7 +11,9 @@ const Footer = () => {
 		<footer className={styles.footer}>
 			<div className={styles.footerTop}>
 				<div className={styles.footerTopWrapper}>
-					<Logo />
+					<div className={styles.footerLogo}>
+						<Logo />
+					</div>
 					<div className={styles.footerLinks}>
 						{FOOTER_LINKS.map((link: ILinkGroup) => {
 							const { id, title, links } = link;

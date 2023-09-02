@@ -1,10 +1,9 @@
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: var(--size-xs);
   text-decoration: none;
-  padding: var(--size-sm);
 }
 
 .logo span {
@@ -21,7 +20,7 @@
   color: var(--dark);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 968px) {
 
   .logo span {
     display: inline-block;
