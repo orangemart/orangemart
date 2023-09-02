@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { PlayBtn } from "@/app/components/Buttons";
+import { PromoCard } from "@/app/components/Cards";
 
 const AboutPage = async () => {
 	return (
@@ -18,9 +18,9 @@ const AboutPage = async () => {
 					</p>
 					<p>
 						We recognize that Bitcoin is an essential tool for survival and believe a great way to
-						learn about it is by playing with it. That&apos;s why we&apos;re hosting an Orange game server
-						where both bitcoiners and gamers without any bitcoin experience can interact with each
-						other and form a strong community.
+						learn about it is by playing with it. That&apos;s why we&apos;re hosting an Orange game
+						server where both bitcoiners and gamers without any bitcoin experience can interact with
+						each other and form a strong community.
 					</p>
 					<p>
 						Orange hosts a server in the popular game called{" "}
@@ -64,13 +64,7 @@ const AboutPage = async () => {
 						layout="responsive"
 						priority
 					/>
-					<div className={styles.aboutPagePromo}>
-						<div>
-							<span>Love playing RUST?</span>
-							<p>Join the Orange server and play your favorite game</p>
-						</div>
-						<PlayBtn />
-					</div>
+					<PromoCard />
 				</div>
 			</div>
 		</div>
