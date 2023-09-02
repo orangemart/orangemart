@@ -1,8 +1,8 @@
 .fundBtn {
-  border: 1px solid var(--primary);
+  border: 1px solid var(--darkest);
   backdrop-filter: blur(2px);
   border-radius: var(--border-radius);
-  color: var(--primary);
+  color: var(--darkest);
   cursor: pointer;
   font-size: 18px;
   font-weight: normal;

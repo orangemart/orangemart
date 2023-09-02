@@ -8,7 +8,12 @@ export const LinkBtn = (props: ILink) => {
 	const target = hasDefaultTarget ? "_self" : "_blank";
 
 	return (
-		<Link className={styles.linkBtn} href={href} target={target} rel="noreferrer">
+		<Link
+			className={styles.linkBtn}
+			href={href}
+			target={target}
+			rel="noreferrer"
+			aria-label={label}>
 			{label}
 			<Asset name="arrow-right" size={20} color="var(--darkest)" />
 		</Link>

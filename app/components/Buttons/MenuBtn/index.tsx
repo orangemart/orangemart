@@ -51,7 +51,13 @@ export const MenuBtn = () => {
 									const target = hasDefaultTarget ? "_self" : "_blank";
 
 									return (
-										<Link href={href} key={id} className={className} target={target}>
+										<Link
+											href={href}
+											key={id}
+											className={className}
+											target={target}
+											aria-label={id}
+											rel="noreferrer">
 											{label}
 										</Link>
 									);
@@ -59,10 +65,11 @@ export const MenuBtn = () => {
 							</div>
 							<div className={styles.menuModalSocial}>
 								{SOCIAL_LINKS.map((link: ILink) => {
-									const { id, href } = link;
+									const { id, href, hasDefaultTarget } = link;
+									const target = hasDefaultTarget ? "_self" : "_blank";
 
 									return (
-										<Link href={href} key={id}>
+										<Link key={id} href={href} target={target} aria-label={id} rel="noreferrer">
 											<Asset name={id} size={28} color="var(--medium)" />
 										</Link>
 									);

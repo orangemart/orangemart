@@ -65,7 +65,7 @@ const AboutPage = async () => {
 					/>
 					<div className={styles.aboutPagePromo}>
 						<div>
-							<h4>Love playing RUST?</h4>
+							<span>Love playing RUST?</span>
 							<p>Join the Orange server and play your favorite game</p>
 						</div>
 						<PlayBtn />

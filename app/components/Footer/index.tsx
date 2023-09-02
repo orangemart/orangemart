@@ -26,7 +26,7 @@ const Footer = () => {
 											const { id, href, label, hasDefaultTarget } = link;
 											const target = hasDefaultTarget ? "_self" : "_blank";
 											return (
-												<Link key={id} href={href} target={target}>
+												<Link key={id} href={href} target={target} aria-label={id} rel="noreferrer">
 													<div className={styles.footerLink}>{label}</div>
 												</Link>
 											);
@@ -47,7 +47,7 @@ const Footer = () => {
 							const target = hasDefaultTarget ? "_self" : "_blank";
 
 							return (
-								<Link key={id} href={href} target={target}>
+								<Link key={id} href={href} target={target} aria-label={id} rel="noreferrer">
 									<Asset name={id} size={28} color="var(--darkest)" />
 								</Link>
 							);

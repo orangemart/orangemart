@@ -69,10 +69,6 @@
   color: var(--darkest);
 }
 
-.menuModal .menuExternalLink {
-  color: var(--primary);
-}
-
 .menuModal .menuLink:hover,
 .menuModal .menuActiveLink:hover,
 .menuModal .menuExternalLink:hover {

@@ -37,13 +37,15 @@
   gap: var(--size-sm);
 }
 
-.aboutPagePromo h4 {
-  margin-bottom: 8px;
-}
-
 .aboutPagePromo p {
   font-size: 16px;
   margin: 0px;
+}
+
+.aboutPagePromo span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: var(--size-xs);
 }
 
 @media (min-width: 768px) {}
