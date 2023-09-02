@@ -18,7 +18,7 @@ const AboutPage = async () => {
 					</p>
 					<p>
 						We recognize that Bitcoin is an essential tool for survival and believe a great way to
-						learn about it is by playing with it. That's why we're hosting an Orange game server
+						learn about it is by playing with it. That&apos;s why we&apos;re hosting an Orange game server
 						where both bitcoiners and gamers without any bitcoin experience can interact with each
 						other and form a strong community.
 					</p>
@@ -37,7 +37,7 @@ const AboutPage = async () => {
 					<p>
 						Orange is also a 24/7 meetup space! Orange can be used as a platform for people to give
 						presentations on Bitcoin-related topics, or to ask questions in a more casual fireside
-						setting. We're committed to sharing the knowledge and excitement of Bitcoin with
+						setting. We&apos;re committed to sharing the knowledge and excitement of Bitcoin with
 						everyone, and we believe that Orange is the perfect place to do that.
 					</p>
 					<p>
@@ -46,12 +46,12 @@ const AboutPage = async () => {
 						see how Bitcoin can be used in a fun and engaging way.
 					</p>
 					<p>
-						Everyone is welcome in Orange, whether you're new or a seasoned veteran, we welcome
+						Everyone is welcome in Orange, whether you&apos;re new or a seasoned veteran, we welcome
 						anyone who wants to learn about Bitcoin and have a great time doing it. So come{" "}
 						<a href="https://dsc.gg/orangemart" target="_blank">
 							join us
 						</a>{" "}
-						in Orange - let's survive, thrive, and learn together!
+						in Orange - let&apos;s survive, thrive, and learn together!
 					</p>
 				</div>
 				<div className={styles.aboutPagePanel}>
