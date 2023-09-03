@@ -1,0 +1,21 @@
+.tagBtn,
+.tagBtnActive {
+  background-color: var(--lightest);
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 12px;
+  padding: var(--size-xs) var(--size-sm);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.tagBtn {
+  border: 1px solid var(--lightest);
+  color: var(--medium);
+}
+
+.tagBtnActive {
+  border: 1px solid var(--dark);
+  color: var(--darkest);
+}

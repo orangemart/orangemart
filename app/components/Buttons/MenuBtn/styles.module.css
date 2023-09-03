@@ -15,7 +15,7 @@
   top: 0px;
   right: 0px;
   left: 0px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .menuModalHead {
@@ -67,10 +67,6 @@
 
 .menuModal .menuActiveLink {
   color: var(--darkest);
-}
-
-.menuModal .menuExternalLink {
-  color: var(--primary);
 }
 
 .menuModal .menuLink:hover,

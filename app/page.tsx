@@ -1,60 +1,40 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { PlayBtn, LinkBtn } from "./components/Buttons";
-import PostCard from "./components/PostCard";
+import { PostCard } from "@/app/components/Cards";
 
 import { IPostCard } from "./types";
+import { getAllPosts, sortPostsByDate } from "@/app/utils/functions";
 
-export default function Home() {
-	// TODO: replace dummy data with real data
-	const posts: IPostCard[] = [
-		{
-			id: "1",
-			title: "Compete to earn Bitcoin on the Orange Rust server",
-			topics: ["rust", "orange", "bitcoin"],
-			authors: "orangemart",
-			description:
-				"Find Blood in locked crates on the Orange Rust server and trade in for bitcoin at the Blood Bank.",
-			pubDate: "May 11 2023",
-			heroImage: "/img/orangewantsyou.jpg",
-		},
-		{
-			id: "1s",
-			title: "Orange Rust server is live",
-			topics: ["rust", "orange", "bitcoin"],
-			authors: "orangemart",
-			description:
-				"The Orange Rust server is live. Join the server and take the Bitcoin Repopulation Unit Survival Test (B.R.U.S.T)",
-			pubDate: "May 11 2023",
-			heroImage: "/img/twitchdrops.jpg",
-		},
-		{
-			id: "1f",
-			title: "Orange Rust server is live",
-			topics: ["rust", "orange", "bitcoin"],
-			authors: "orangemart",
-			description:
-				"The Orange Rust server is live. Join the server and take the Bitcoin Repopulation Unit Survival Test (B.R.U.S.T)",
-			pubDate: "May 11 2023",
-			heroImage: "/img/orangemap.jpg",
-		},
-	];
+const HomePage = async () => {
+	const data = await getAllPosts();
+	const posts = sortPostsByDate(data).slice(0, 3);
 
 	return (
 		<div className="container">
 			<section className={styles.heroSection}>
 				<div className={styles.heroBackground}>
-					<div className="wrapper">
-						<div className={styles.heroContent}>
-							<div>Play and Earn</div>
-							<div>
-								<h1>Your journey starts here</h1>
-								<p>
-									Learn about financial freedom in a fun and engaging way by playing your favorite
-									game RUST and earning real Bitcoin
-								</p>
-								<PlayBtn />
-							</div>
+					<Image
+						src="/assets/hero.png"
+						alt="background"
+						className="cover"
+						blurDataURL="/assets/hero.png"
+						placeholder="blur"
+						width={2620}
+						height={970}
+						priority
+					/>
+				</div>
+				<div className="wrapper">
+					<div className={styles.heroContent}>
+						<div>Play and Earn</div>
+						<div>
+							<h1>Your journey starts here</h1>
+							<p>
+								Learn about financial freedom in a fun and engaging way by playing your favorite
+								game RUST and earning real Bitcoin
+							</p>
+							<PlayBtn />
 						</div>
 					</div>
 				</div>
@@ -78,14 +58,7 @@ export default function Home() {
 							/>
 						</div>
 						<div className={styles.aboutImage}>
-							<Image
-								src="/assets/flag.png"
-								alt="flag"
-								className="cover"
-								width={400}
-								height={225}
-								priority
-							/>
+							<Image src="/assets/flag.png" alt="flag" className="cover" width={400} height={225} />
 						</div>
 					</div>
 				</div>
@@ -99,7 +72,7 @@ export default function Home() {
 						</div>
 						<div className={styles.postsBody}>
 							{posts.map((post: IPostCard) => {
-								return <PostCard key={post.id} {...post} />;
+								return <PostCard key={post.slug} {...post} />;
 							})}
 						</div>
 					</div>
@@ -123,7 +96,7 @@ export default function Home() {
 								width="560"
 								height="315"
 								src="https://www.youtube.com/embed/m3I9CWMRf4Y?si=mE7chiHzeWEcZCNy?controls=0&rel=0&iv_load_policy=0"
-								title="YouTube video player"
+								title="Welcome to Orange"
 								allowFullScreen></iframe>
 						</div>
 					</div>
@@ -131,4 +104,6 @@ export default function Home() {
 			</section>
 		</div>
 	);
-}
+};
+
+export default HomePage;

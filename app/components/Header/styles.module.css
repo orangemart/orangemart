@@ -7,7 +7,7 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header nav {
@@ -31,6 +31,7 @@
   justify-content: center;
   color: var(--medium);
   min-height: 100%;
+  font-weight: 500;
   text-decoration: none;
 }
 

@@ -1,17 +1,21 @@
 /* ~~ HERO SECTION ~~ */
-.heroSection,
+.heroSection {
+  position: relative;
+}
+
 .heroBackground {
-  background-image: url("/assets/hero.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: absolute;
+  top: 0px;
+  left: 0px;
   width: 100%;
   height: 100%;
+  z-index: 0;
 }
 
 .heroContent {
   min-width: 100%;
   padding: 160px 16px 80px 16px;
+  z-index: 1;
 }
 
 .heroContent p {
@@ -72,7 +76,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fit, 1fr);
   justify-content: space-between;
-  gap: var(--size-xl);
+  grid-gap: var(--size-xl);
   width: 100%;
 }
 
@@ -93,7 +97,7 @@
 }
 
 .videoSection p {
-  color: var(--medium);
+  color: var(--light);
 }
 
 .videoWrapper {
@@ -180,11 +184,7 @@
   }
 
   .postsBody {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr;
-    grid-gap: var(--size-xl);
-    width: 100%;
+    grid-template-columns: repeat(3, 4fr);
   }
 
   /* ~~ VIDEO SECTION ~~ */

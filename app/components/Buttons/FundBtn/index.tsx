@@ -6,7 +6,12 @@ export const FundBtn = (props: ILink) => {
 	const { href, label } = props;
 
 	return (
-		<Link className={styles.fundBtn} href={href} target="_blank" rel="noreferrer">
+		<Link
+			className={styles.fundBtn}
+			href={href}
+			target="_blank"
+			aria-label="contribute"
+			rel="noreferrer">
 			{label}
 		</Link>
 	);

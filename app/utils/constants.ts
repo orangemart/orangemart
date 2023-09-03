@@ -101,3 +101,5 @@ export const FOOTER_LINKS: ILinkGroup[] = [
 		links: RESOURCE_LINKS,
 	},
 ];
+
+export const BLOG_TAGS: string[] = ["all topics", "orange", "rust", "bitcoin"];
