@@ -1,0 +1,14 @@
+.blogPage {
+  padding: 160px 16px 80px 16px;
+}
+
+.blogPageTopics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-xs);
+  margin-bottom: var(--size-md);
+}
+
+.blogPage h1 {
+  margin-bottom: var(--size-md);
+}
