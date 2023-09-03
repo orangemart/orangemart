@@ -4,40 +4,11 @@ import { PlayBtn, LinkBtn } from "./components/Buttons";
 import { PostCard } from "@/app/components/Cards";
 
 import { IPostCard } from "./types";
+import { getAllPosts, sortPostsByDate } from "@/app/utils/functions";
 
-export default function Home() {
-	// TODO: replace dummy data with real data
-	const posts: IPostCard[] = [
-		{
-			id: "1",
-			title: "Compete to earn Bitcoin on the Orange Rust server",
-			topics: ["rust", "orange", "bitcoin"],
-			authors: "orangemart",
-			description:
-				"Find Blood in locked crates on the Orange Rust server and trade in for bitcoin at the Blood Bank",
-			pubDate: "Jun 12, 2023",
-			heroImage: "/img/orangewantsyou.jpg",
-		},
-		{
-			id: "1s",
-			title:
-				"Unlock Free Rust Skins through Twitch Drops and Earn Bitcoin on the Innovative Orange Server",
-			topics: ["rust", "orange", "bitcoin"],
-			authors: "orangemart",
-			description: "Watch streamers to unlock unique skins",
-			pubDate: "May 11 2023",
-			heroImage: "/img/twitchdrops.jpg",
-		},
-		{
-			id: "1f",
-			title: "How to join the Orange server in Rust",
-			topics: ["rust", "orange", "bitcoin"],
-			authors: "orangemart",
-			description: "Boot up your own rust server for free",
-			pubDate: "May 8, 2023",
-			heroImage: "/img/orangemap.jpg",
-		},
-	];
+const HomePage = async () => {
+	const data = await getAllPosts();
+	const posts = sortPostsByDate(data).slice(0, 3);
 
 	return (
 		<div className="container">
@@ -133,4 +104,6 @@ export default function Home() {
 			</section>
 		</div>
 	);
-}
+};
+
+export default HomePage;
