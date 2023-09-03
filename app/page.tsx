@@ -72,7 +72,7 @@ const HomePage = async () => {
 						</div>
 						<div className={styles.postsBody}>
 							{posts.map((post: IPostCard) => {
-								return <PostCard key={post.id} {...post} />;
+								return <PostCard key={post.slug} {...post} />;
 							})}
 						</div>
 					</div>

@@ -76,7 +76,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto-fit, 1fr);
   justify-content: space-between;
-  gap: var(--size-xl);
+  grid-gap: var(--size-xl);
   width: 100%;
 }
 
@@ -184,11 +184,7 @@
   }
 
   .postsBody {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr;
-    grid-gap: var(--size-xl);
-    width: 100%;
+    grid-template-columns: repeat(3, 4fr);
   }
 
   /* ~~ VIDEO SECTION ~~ */

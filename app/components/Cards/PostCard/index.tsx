@@ -6,9 +6,8 @@ import styles from "./styles.module.css";
 import { LinkBtn } from "@/app/components/Buttons";
 
 export const PostCard = (props: IPostCard) => {
-	const { title, description, pubDate, heroImage } = props;
-	// TODO: replace with actual href
-	const href = `/blog/article`;
+	const { title, description, heroImage, slug } = props;
+	const href = `/blog/${slug}`;
 
 	return (
 		<div className={styles.postCard}>
