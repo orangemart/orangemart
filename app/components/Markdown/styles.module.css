@@ -1,0 +1,131 @@
+.markdown {
+  color: var(--darkest);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  place-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.markdown h1 {
+  font-size: 44px;
+  margin-top: 0px;
+  margin-bottom: var(--size-lg);
+}
+
+.markdownContentMDX h1 {
+  font-size: 32px;
+  margin-top: var(--size-lg);
+  margin-bottom: var(--size-md);
+}
+
+.markdownContentMDX h2 {
+  margin-top: var(--size-md);
+  margin-bottom: var(--size-sm);
+}
+
+.markdownContentMDX h3 {
+  margin: var(--size-sm) 0px;
+}
+
+.markdownContent {
+  width: 100%;
+  grid-column: 1 / 9;
+  padding: 0px var(--size-sm);
+}
+
+.markdownAside {
+  width: 100%;
+  display: block;
+  align-self: flex-start;
+  position: sticky;
+  top: 160px;
+  z-index: 1;
+  grid-column: 10 / 13;
+}
+
+.markdownContent img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.markdownContentMDX a,
+.markdownContentMDX div,
+.markdownContentMDX p,
+.markdownContentMDX code,
+.markdownContentMDX ul,
+.markdownContentMDX li,
+.markdownContentMDX ol,
+.markdownContentMDX span,
+.markdownContentMDX pre,
+.markdownContentMDX code,
+.markdownContentMDX blockquote,
+.markdownContentMDX img {
+  margin-bottom: var(--size-md);
+}
+
+.markdownContentMDX pre,
+.markdownContentMDX code {
+  background: var(--darkest);
+  border-radius: 4px;
+  color: var(--lightest);
+  font-size: 18px;
+  line-height: 1.6;
+  padding: var(--size-sm);
+  overflow-x: auto;
+}
+
+.markdownTags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--size-sm);
+}
+
+.markdownTags a {
+  background-color: var(--lightest);
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 12px;
+  padding: var(--size-xs) var(--size-sm);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.markdownTags a:hover {
+  background-color: var(--light);
+}
+
+.markdownDetails {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: var(--size-xs);
+  align-items: center;
+  margin-bottom: var(--size-md);
+}
+
+.markdownDetails img {
+  border-radius: 50%;
+  margin: 0px;
+}
+
+.markdownName {
+  color: var(--dark);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.markdownInfo {
+  display: flex;
+  align-items: center;
+  grid-gap: var(--size-xs);
+}
+
+.markdownInfo div {
+  font-size: 14px;
+  color: var(--medium);
+}
