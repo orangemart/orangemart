@@ -1,4 +1,4 @@
-import { ILink, ILinkGroup } from "../types";
+import { ILink, ILinkGroup, IAuthor } from "../types";
 
 export const RUST_SERVER_IP = "104.129.133.89:28116";
 
@@ -103,3 +103,18 @@ export const FOOTER_LINKS: ILinkGroup[] = [
 ];
 
 export const BLOG_TOPICS: string[] = ["all topics", "orange", "rust", "bitcoin"];
+
+export const AUTHORS: IAuthor[] = [
+	{
+		id: "orangemart",
+		name: "Orange Mart",
+		avatar: "/img/orangemart.png",
+		description: "Orange is a Rust developer and Bitcoiner.",
+	},
+	{
+		id: "good-morning-bitcoin",
+		name: "Good Morning Bitcoin",
+		avatar: "/img/goodmorningbitcoin.png",
+		description: "Internet radio station focused on Bitcoin content.",
+	},
+];
