@@ -1,0 +1,10 @@
+.tableSection li {
+  list-style: none;
+  margin-bottom: var(--size-xs);
+}
+
+.tableSection a {
+  color: var(--dark);
+  font-size: 16px;
+  line-height: 1.2;
+}
