@@ -71,7 +71,6 @@ h6 {
 a,
 div,
 p,
-code,
 ul,
 li,
 ol,
@@ -84,6 +83,12 @@ button {
 
 iframe {
   border: none;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--light);
+  margin: var(--size-xl) 0;
 }
 
 .main {

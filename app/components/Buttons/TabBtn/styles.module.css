@@ -19,3 +19,8 @@
   border: 1px solid var(--dark);
   color: var(--darkest);
 }
+
+.tabBtn:hover,
+.tagBtnActive:hover {
+  background-color: var(--light);
+}
