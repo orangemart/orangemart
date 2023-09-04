@@ -31,9 +31,14 @@ export interface IPostCard {
 	heroImage: string;
 }
 
-export interface ITagBtn {
+export interface ITabBtn {
 	label: string;
-	href: string;
+	href: {
+		pathname: string;
+		query: {
+			topic?: string;
+		};
+	};
 }
 
 export interface IPostList {

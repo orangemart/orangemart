@@ -102,4 +102,4 @@ export const FOOTER_LINKS: ILinkGroup[] = [
 	},
 ];
 
-export const BLOG_TAGS: string[] = ["all topics", "orange", "rust", "bitcoin"];
+export const BLOG_TOPICS: string[] = ["all topics", "orange", "rust", "bitcoin"];
