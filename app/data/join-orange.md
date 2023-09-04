@@ -7,7 +7,7 @@ pubDate: "May 08 2023"
 heroImage: "/img/orangemap.jpg"
 ---
 
-# Install Rust from Steam
+## Install Rust from Steam
 
 To install Rust from Steam, follow these steps:
 
