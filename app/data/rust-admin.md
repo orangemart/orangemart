@@ -1,8 +1,7 @@
 ---
 title: "Setting Up and Modifying Your Own Rust Server: A Beginner's Guide"
 topics: ["rust", "orange"]
-authors:
-  - orangemart
+author: "orangemart"
 description: "Boot up your own rust server for free"
 pubDate: "May 25 2023"
 heroImage: "/img/orangegod.png"

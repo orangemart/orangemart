@@ -2,8 +2,7 @@
 title:
   "Unlock Free Rust Skins through Twitch Drops and Earn Bitcoin on the Innovative Orange Server"
 topics: ["rust", "orange", "bitcoin"]
-authors:
-  - good-morning-bitcoin
+author: "good-morning-bitcoin"
 description: "Watch streamers to unlock unique skins"
 pubDate: "June 12 2023"
 heroImage: "/img/twitchdrops.jpg"

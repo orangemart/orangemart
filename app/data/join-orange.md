@@ -1,8 +1,7 @@
 ---
 title: "How to join the Orange server in Rust"
 topics: ["rust", "orange"]
-authors:
-  - orangemart
+author: "orangemart"
 description: "Install Rust from the Steam store and find Orange in the modded category"
 pubDate: "May 08 2023"
 heroImage: "/img/orangemap.jpg"
@@ -43,8 +42,8 @@ client.connect 104.129.133.89:28119
 
 ### Good luck, have fun!
 
-Need help? Ask the Orange community on <a href="https://dsc.gg/orangemart" target="_blank"> Discord
-</a>
+Need help? Ask the Orange community on
+<a href="https://dsc.gg/orangemart" target="_blank">Discord</a>
 
 Learn how to earn Bitcoin in Orange
 <a href="https://orangem.art/blog/earn-bitcoin/" target="_blank"> here.</a>
