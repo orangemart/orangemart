@@ -1,0 +1,14 @@
+.tableOfContents {
+  background-color: var(--lightest);
+  border-radius: var(--border-radius);
+  padding: var(--size-sm);
+}
+
+.tableOfContentsTitle {
+  color: var(--medium);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: var(--size-sm);
+  text-transform: uppercase;
+}
