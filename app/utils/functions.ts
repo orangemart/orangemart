@@ -2,13 +2,8 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 import readingTime from "reading-time";
-import rehypeSlug from "rehype-slug";
-import rehypeHighlight from "rehype-highlight";
-import rehypeCodeTitles from "rehype-code-titles";
-import { serialize } from "next-mdx-remote/serialize";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
-import { IPostCard, IHeading } from "../types";
+import { IPostCard } from "@/app/types";
 
 export async function getAllPosts() {
 	try {
@@ -48,7 +43,7 @@ export async function getFileFromPath(filePath: string) {
 		const { content, data } = matter(source);
 
 		return {
-			content,
+			content: content,
 			frontmatter: {
 				title: data.title,
 				topics: data.topics,
@@ -67,41 +62,5 @@ export async function getFileFromPath(filePath: string) {
 			content: "",
 			frontmatter: null,
 		};
-	}
-}
-
-export async function getHeadings(source: any) {
-	const headingLines = source.split("\n").filter((line: any) => line.match(/^###*\s/));
-	const headings = headingLines.map((raw: any) => {
-		const text = raw.replace(/^###*\s/, "").trim();
-		const level = raw.slice(0, 3).replace(/[^#]/g, "").length;
-		return { text, level } as IHeading;
-	});
-
-	return headings;
-}
-
-export async function getMdxSource(content: string) {
-	try {
-		const source = await serialize(content, {
-			mdxOptions: {
-				rehypePlugins: [
-					rehypeSlug,
-					[
-						rehypeAutolinkHeadings,
-						{
-							properties: { className: ["anchor"] },
-						},
-						{ behaviour: "wrap" },
-					],
-					rehypeHighlight,
-					rehypeCodeTitles,
-				],
-			},
-		});
-		return source;
-	} catch (error) {
-		console.error(error);
-		return null;
 	}
 }
