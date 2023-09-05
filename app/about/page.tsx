@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { PromoCard } from "@/app/components/Cards";
 
-const AboutPage = async () => {
+const AboutPage = () => {
 	return (
 		<div className="wrapper">
 			<div className={styles.aboutPage}>
