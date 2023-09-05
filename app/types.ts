@@ -53,3 +53,9 @@ export interface ISupporter {
 	avatar: string;
 	description: string;
 }
+
+export interface IContributor {
+	id: number;
+	handle: string;
+	value: number;
+}
