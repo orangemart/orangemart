@@ -15,10 +15,10 @@ const HomePage = async () => {
 			<section className={styles.heroSection}>
 				<div className={styles.heroBackground}>
 					<Image
-						src="/assets/hero.png"
+						src="/img/hero.png"
 						alt="background"
 						className="cover"
-						blurDataURL="/assets/hero.png"
+						blurDataURL="/img/hero.png"
 						placeholder="blur"
 						width={2620}
 						height={970}
@@ -58,7 +58,7 @@ const HomePage = async () => {
 							/>
 						</div>
 						<div className={styles.aboutImage}>
-							<Image src="/assets/flag.png" alt="flag" className="cover" width={400} height={225} />
+							<Image src="/img/flag.png" alt="flag" className="cover" width={400} height={225} />
 						</div>
 					</div>
 				</div>

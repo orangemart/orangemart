@@ -1,5 +1,5 @@
 .aboutPage {
-  padding: 160px 16px 80px 16px;
+  padding: 120px 16px 40px 16px;
 }
 
 .aboutPage h1 {
@@ -33,6 +33,7 @@
     grid-template-rows: 1fr;
     row-gap: 0;
     column-gap: var(--size-xl);
+    padding: 160px 16px 80px 16px;
   }
 
   .aboutPage img {

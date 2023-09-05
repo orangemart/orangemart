@@ -51,7 +51,7 @@ export const MenuBtn = () => {
 									const target = hasDefaultTarget ? "_self" : "_blank";
 
 									return (
-										<Link
+										<a
 											href={href}
 											key={id}
 											className={className}
@@ -59,7 +59,7 @@ export const MenuBtn = () => {
 											aria-label={id}
 											rel="noreferrer">
 											{label}
-										</Link>
+										</a>
 									);
 								})}
 							</div>

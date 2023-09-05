@@ -1,8 +1,7 @@
 ---
 title: "Compete to earn Bitcoin on the Orange Rust server"
 topics: ["rust", "orange", "bitcoin"]
-authors:
-  - orangemart
+author: "orangemart"
 description:
   "Find Blood in locked crates on the Orange Rust server and trade in for bitcoin at the Blood Bank."
 pubDate: "May 11 2023"
@@ -12,7 +11,7 @@ heroImage: "/img/orangewantsyou.jpg"
 Do you have what it takes to earn Bitcoin playing Rust? Here's Orange Mart's guide to earning
 Bitcoin in Orange.
 
-# Unleash the Hunt: Find Blood in Locked Crates
+## Unleash the Hunt: Find Blood in Locked Crates
 
 Blood can be found in locked crates on the Orange server and traded in for Bitcoin at the Blood
 Bank.
@@ -39,8 +38,8 @@ Orange
 
 ### Good luck, have fun!
 
-Need help? Ask the Orange community on <a href="https://dsc.gg/orangemart" target="_blank"> Discord
-</a>
+Need help? Ask the Orange community on
+<a href="https://dsc.gg/orangemart" target="_blank">Discord</a>
 
 Learn how to join the Orange server <a href="https://orangem.art/blog/join-orange/" target="_blank">
 here.</a>

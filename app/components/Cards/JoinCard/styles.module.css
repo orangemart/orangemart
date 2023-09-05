@@ -1,0 +1,15 @@
+.joinCard {
+  border: 1px solid var(--light);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-xs);
+  margin-bottom: var(--size-md);
+  padding: var(--size-sm);
+}
+
+.joinCard a,
+.joinCard p {
+  font-size: 16px;
+  margin: 0px;
+}

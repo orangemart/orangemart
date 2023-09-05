@@ -1,8 +1,7 @@
 ---
 title: "Setting Up and Modifying Your Own Rust Server: A Beginner's Guide"
 topics: ["rust", "orange"]
-authors:
-  - orangemart
+author: "orangemart"
 description: "Boot up your own rust server for free"
 pubDate: "May 25 2023"
 heroImage: "/img/orangegod.png"
@@ -11,7 +10,7 @@ heroImage: "/img/orangegod.png"
 Are you ready to conquer the world of Rust? Follow this guide to set up your own server and unlock
 the powers of an admin.
 
-# Get Your Folders Organized
+## Get Your Folders Organized
 
 Here's what you need to do:
 
@@ -51,7 +50,7 @@ Rustdedicated.exe -batchmode +server.port 28119 +server.queryport 28116 +rcon.po
   <a href="https://wiki.facepunch.com/rust/Creating-a-server" target="_blank">Facepunch's server
   guide</a>.
 
-# Boot Up Your Rust Server
+## Boot Up Your Rust Server
 
 If you've completed the folder setup, congratulations! Now it's time to launch your Rust server and
 connect to it:
@@ -73,7 +72,7 @@ client.connect localhost:28119
 
 Congratulations! You're now loading into your very own Rust server.
 
-# Establish Admin Powers
+## Establish Admin Powers
 
 As the owner of the server, it's time to grant yourself access to all the administrative commands
 that will give you complete control over your server. Follow these steps:
@@ -179,7 +178,7 @@ For more commands, check out this useful list from
 If you want to spawn any item in the game, press F1 to open the console and select the item. For
 vehicles like cars and minicopters, you can use the command "spawn minicopter," etc
 
-# Customise and Modify Your Server
+## Customise and Modify Your Server
 
 This is where things start to get interesting. However, be cautious as you may accidentally break
 your server and need to start over. So let's dig in:

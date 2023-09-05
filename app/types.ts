@@ -25,17 +25,29 @@ export interface IPostCard {
 	slug: string;
 	title: string;
 	topics: string[];
-	authors: string;
+	author: string;
 	description: string;
 	pubDate: string;
 	heroImage: string;
 }
 
-export interface ITagBtn {
+export interface ITabBtn {
 	label: string;
-	href: string;
+	href: {
+		pathname: string;
+		query: {
+			topic?: string;
+		};
+	};
 }
 
 export interface IPostList {
 	posts: IPostCard[];
+}
+
+export interface IAuthor {
+	id: string;
+	name: string;
+	avatar: string;
+	description: string;
 }

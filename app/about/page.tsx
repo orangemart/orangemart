@@ -57,7 +57,7 @@ const AboutPage = async () => {
 				<div className={styles.aboutPagePanel}>
 					<Image
 						className="cover"
-						src="/assets/flag.png"
+						src="/img/flag.png"
 						alt="logo"
 						width={300}
 						height={200}
