@@ -1,11 +1,8 @@
 .markdown {
   color: var(--darkest);
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr;
-  place-items: center;
   max-width: 1280px;
   margin: 0 auto;
+  padding: 120px 16px 40px 16px;
 }
 
 .markdown h1 {
@@ -14,35 +11,19 @@
   margin-bottom: var(--size-lg);
 }
 
-.markdownContentMDX h1 {
-  font-size: 32px;
-  margin-top: var(--size-lg);
-  margin-bottom: var(--size-md);
-}
-
-.markdownContentMDX h2 {
-  margin-top: var(--size-md);
-  margin-bottom: var(--size-sm);
-}
-
-.markdownContentMDX h3 {
-  margin: var(--size-sm) 0px;
-}
-
 .markdownContent {
   width: 100%;
   grid-column: 1 / 9;
-  padding: 0px var(--size-sm);
 }
 
-.markdownAside {
+.markdownPanel {
   width: 100%;
   display: block;
   align-self: flex-start;
   position: sticky;
   top: 160px;
   z-index: 1;
-  grid-column: 10 / 13;
+  grid-column: 9 / 13;
 }
 
 .markdownContent img {
@@ -51,7 +32,27 @@
   object-fit: contain;
 }
 
-.markdownContentMDX a,
+.markdownContentMDX h2 {
+  margin-top: var(--size-lg);
+  margin-bottom: var(--size-md);
+}
+
+.markdownContentMDX h3 {
+  margin-top: var(--size-md);
+  margin-bottom: var(--size-sm);
+}
+
+.markdownContentMDX h4 {
+  margin-top: var(--size-sm);
+  margin-bottom: var(--size-xs);
+}
+
+.markdownContentMDX a {
+  color: var(--darkest);
+  font-weight: 600;
+  margin-bottom: var(--size-md);
+}
+
 .markdownContentMDX div,
 .markdownContentMDX p,
 .markdownContentMDX code,
@@ -59,22 +60,30 @@
 .markdownContentMDX li,
 .markdownContentMDX ol,
 .markdownContentMDX span,
-.markdownContentMDX pre,
-.markdownContentMDX code,
 .markdownContentMDX blockquote,
-.markdownContentMDX img {
+.markdownContentMDX pre,
+.markdownContentMDX table {
   margin-bottom: var(--size-md);
 }
 
-.markdownContentMDX pre,
+.markdownContentMDX img {
+  display: block;
+  margin: var(--size-md) 0px;
+}
+
 .markdownContentMDX code {
   background: var(--darkest);
   border-radius: 4px;
+  display: block;
   color: var(--lightest);
   font-size: 18px;
   line-height: 1.6;
   padding: var(--size-sm);
   overflow-x: auto;
+}
+
+.markdownContentMDX li {
+  margin-left: var(--size-sm);
 }
 
 .markdownTags {
@@ -109,6 +118,7 @@
 }
 
 .markdownDetails img {
+  border: 1px solid var(--light);
   border-radius: 50%;
   margin: 0px;
 }
@@ -128,4 +138,16 @@
 .markdownInfo div {
   font-size: 14px;
   color: var(--medium);
+}
+
+@media (min-width: 968px) {
+  .markdown {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    row-gap: 0;
+    column-gap: var(--size-xl);
+    place-items: center;
+    padding: 160px 16px 80px 16px;
+  }
 }
