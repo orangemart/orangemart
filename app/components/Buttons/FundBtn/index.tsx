@@ -16,5 +16,3 @@ export const FundBtn = (props: ILink) => {
 		</Link>
 	);
 };
-
-export default FundBtn;

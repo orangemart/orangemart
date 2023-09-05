@@ -12,5 +12,3 @@ export const PromoCard = () => {
 		</div>
 	);
 };
-
-export default PromoCard;

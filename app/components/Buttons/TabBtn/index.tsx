@@ -14,5 +14,3 @@ export const TabBtn = (props: ITabBtn) => {
 		</Link>
 	);
 };
-
-export default TabBtn;

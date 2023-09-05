@@ -82,5 +82,3 @@ export const MenuBtn = () => {
 		</>
 	);
 };
-
-export default MenuBtn;
