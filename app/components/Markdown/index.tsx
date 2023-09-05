@@ -2,15 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./styles.module.css";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import TableOfContents from "@/app/components/TableOfContents";
+import { PromoCard, JoinCard } from "@/app/components/Cards";
 
 import { IAuthor } from "@/app/types";
-import { getFileFromPath, getHeadings } from "@/app/utils/functions";
+import { getFileFromPath } from "@/app/utils/functions";
 import { AUTHORS } from "@/app/utils/constants";
 
 const Markdown = async ({ post }: { post: string }) => {
 	const { content, frontmatter } = await getFileFromPath(post);
-	const headings = await getHeadings(content);
 	const author = AUTHORS.find((author: IAuthor) => author.id === frontmatter?.author);
 
 	return (
@@ -45,6 +44,7 @@ const Markdown = async ({ post }: { post: string }) => {
 				<div className={styles.markdownContentMDX}>
 					<MDXRemote source={content} />
 				</div>
+				<hr></hr>
 				<div className={styles.markdownTags}>
 					{frontmatter?.topics &&
 						frontmatter.topics.map((topic: string, idx: number) => (
@@ -64,9 +64,11 @@ const Markdown = async ({ post }: { post: string }) => {
 							</Link>
 						))}
 				</div>
+				<hr></hr>
 			</div>
-			<div className={styles.markdownAside}>
-				<TableOfContents headings={headings} path={post} />
+			<div className={styles.markdownPanel}>
+				<JoinCard />
+				<PromoCard />
 			</div>
 		</section>
 	);
