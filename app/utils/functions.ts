@@ -64,3 +64,9 @@ export async function getFileFromPath(filePath: string) {
 		};
 	}
 }
+
+export const intlNumFormat = function (num: number, locale = "en-US") {
+	return new Intl.NumberFormat(locale, {
+		maximumFractionDigits: 0,
+	}).format(num);
+};
