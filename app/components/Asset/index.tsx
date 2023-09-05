@@ -11,9 +11,12 @@ import { TwitchIcon } from "@/app/components/Icons/TwitchIcon";
 import { NostrIcon } from "@/app/components/Icons/NostrIcon";
 import { TikTokIcon } from "@/app/components/Icons/TikTokIcon";
 import { DiscordIcon } from "@/app/components/Icons/DiscordIcon";
+import { TangerineIcon } from "@/app/components/Icons/TangerineIcon";
 
 const renderAssetByName = (name: string, color: string) => {
 	switch (name) {
+		case "tangerine":
+			return <TangerineIcon color={color} />;
 		case "menu":
 			return <MenuIcon color={color} />;
 		case "close":
