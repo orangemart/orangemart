@@ -1,5 +1,6 @@
 .footer {
   background-color: var(--lightest);
+  width: 100%;
 }
 
 .footerTop {

@@ -5,7 +5,7 @@ export const PromoCard = () => {
 	return (
 		<div className={styles.promoCard}>
 			<div>
-				<span>Love playing RUST?</span>
+				<h4>Love playing RUST?</h4>
 				<p>Join the Orange server and play your favorite game</p>
 			</div>
 			<PlayBtn />
