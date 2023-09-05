@@ -1,4 +1,4 @@
-import { ILink, ILinkGroup, IAuthor } from "../types";
+import { ILink, ILinkGroup, ISupporter } from "../types";
 
 export const RUST_SERVER_IP = "104.129.133.89:28116";
 
@@ -106,7 +106,7 @@ export const BLOG_TOPICS: string[] = ["all topics", "orange", "rust", "bitcoin"]
 
 export const DEFAULT_TOPIC = "all topics";
 
-export const AUTHORS: IAuthor[] = [
+export const SUPPORTERS: ISupporter[] = [
 	{
 		id: "orangemart",
 		name: "Orange Mart",

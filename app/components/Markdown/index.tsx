@@ -4,13 +4,13 @@ import styles from "./styles.module.css";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { PromoCard, JoinCard } from "@/app/components/Cards";
 
-import { IAuthor } from "@/app/types";
+import { ISupporter } from "@/app/types";
 import { getFileFromPath } from "@/app/utils/functions";
-import { AUTHORS } from "@/app/utils/constants";
+import { SUPPORTERS } from "@/app/utils/constants";
 
 const Markdown = async ({ post }: { post: string }) => {
 	const { content, frontmatter } = await getFileFromPath(post);
-	const author = AUTHORS.find((author: IAuthor) => author.id === frontmatter?.author);
+	const author = SUPPORTERS.find((author: ISupporter) => author.id === frontmatter?.author);
 
 	return (
 		<section className={styles.markdown}>

@@ -47,7 +47,7 @@ export interface IPostList {
 	activeTab: string;
 }
 
-export interface IAuthor {
+export interface ISupporter {
 	id: string;
 	name: string;
 	avatar: string;
