@@ -39,10 +39,12 @@ export interface ITabBtn {
 			topic?: string;
 		};
 	};
+	isActive: boolean;
 }
 
 export interface IPostList {
 	posts: IPostCard[];
+	activeTab: string;
 }
 
 export interface IAuthor {

@@ -1,19 +1,15 @@
-"use client";
-
-import { useSearchParams } from "next/navigation";
 import styles from "./styles.module.css";
 
 import { IPostCard, IPostList } from "@/app/types";
 import { PostCard } from "@/app/components/Cards";
+import { DEFAULT_TOPIC } from "@/app/utils/constants";
 
 const PostList = (props: IPostList) => {
-	const searchParams = useSearchParams();
-	const search = searchParams.get("topic");
-	const { posts } = props;
+	const { posts, activeTab } = props;
 
 	const filteredPosts = posts.filter((post: IPostCard) => {
-		if (search) {
-			const hasTopic = post.topics.includes(search as string);
+		if (activeTab !== DEFAULT_TOPIC) {
+			const hasTopic = post.topics.includes(activeTab);
 			if (hasTopic) {
 				return post;
 			}

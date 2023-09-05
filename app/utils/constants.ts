@@ -104,6 +104,8 @@ export const FOOTER_LINKS: ILinkGroup[] = [
 
 export const BLOG_TOPICS: string[] = ["all topics", "orange", "rust", "bitcoin"];
 
+export const DEFAULT_TOPIC = "all topics";
+
 export const AUTHORS: IAuthor[] = [
 	{
 		id: "orangemart",
