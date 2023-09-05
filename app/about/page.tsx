@@ -61,7 +61,6 @@ const AboutPage = () => {
 						alt="logo"
 						width={300}
 						height={200}
-						layout="responsive"
 						priority
 					/>
 					<PromoCard />
