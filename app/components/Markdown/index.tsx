@@ -5,12 +5,13 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { PromoCard, JoinCard } from "@/app/components/Cards";
 
 import { ISupporter } from "@/app/types";
-import { getFileFromPath } from "@/app/utils/functions";
+import { getFileFromPath, intlDateFormat } from "@/app/utils/functions";
 import { SUPPORTERS } from "@/app/utils/constants";
 
 const Markdown = async ({ post }: { post: string }) => {
 	const { content, frontmatter } = await getFileFromPath(post);
 	const author = SUPPORTERS.find((author: ISupporter) => author.id === frontmatter?.author);
+	const date = intlDateFormat(new Date(frontmatter?.pubDate)) || "";
 
 	return (
 		<section className={styles.markdown}>
@@ -21,7 +22,7 @@ const Markdown = async ({ post }: { post: string }) => {
 					<div>
 						<div className={styles.markdownName}>{author?.name}</div>
 						<div className={styles.markdownInfo}>
-							<div>{frontmatter?.pubDate}</div>
+							<div>{date}</div>
 							<div>·</div>
 							<div>{frontmatter?.readingTime}</div>
 						</div>
