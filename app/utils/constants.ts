@@ -112,13 +112,32 @@ export const SUPPORTERS: ISupporter[] = [
 		name: "Geyser Contributors",
 		avatar: "/img/geyser-contributers.png",
 		description: "The coolest people in the world.",
+		links: [
+			{
+				id: "twitter",
+				href: "https://twitter.com/i/lists/1627971768173608960",
+			},
+			{
+				id: "website",
+				href: "https://geyser.fund/orange",
+			},
+		],
 	},
 	{
 		id: "geyser-fund",
 		name: "Geyser Fund",
 		avatar: "/img/geyser-fund.png",
-		description:
-			"Geyser is a lightning-native crowdfunding platform that makes it easy for online creators to launch their projects, engage their global community and monetize.",
+		description: "Geyser is a lightning-native crowdfunding platform.",
+		links: [
+			{
+				id: "twitter",
+				href: "https://twitter.com/geyserfund",
+			},
+			{
+				id: "website",
+				href: "https://geyser.fund/",
+			},
+		],
 	},
 	{
 		id: "lightsats",
@@ -126,24 +145,55 @@ export const SUPPORTERS: ISupporter[] = [
 		avatar: "/img/lightsats.png",
 		description:
 			"Gift sats without losing them.✨ Building a pre-coiner onramp via bitcoin tips/gifts.",
+		links: [
+			{
+				id: "twitter",
+				href: "https://twitter.com/Lightsats21",
+			},
+			{
+				id: "website",
+				href: "https://lightsats.com",
+			},
+		],
 	},
 	{
 		id: "good-morning-bitcoin",
 		name: "Good Morning Bitcoin",
 		avatar: "/img/goodmorningbitcoin.png",
 		description: "Internet radio station focused on Bitcoin content.",
+		links: [
+			{
+				id: "twitter",
+				href: "https://twitter.com/goodmorningbtc",
+			},
+			{
+				id: "website",
+				href: "https://goodmorningbitcoin.com/",
+			},
+		],
 	},
 	{
 		id: "nakamotor",
 		name: "Nakamotor",
 		avatar: "/img/nakamotor.png",
 		description: "Monetizing energy through Bitcoin mining.",
+		links: [
+			{
+				id: "twitter",
+				href: "https://twitter.com/nakamotor_",
+			},
+			{
+				id: "website",
+				href: "https://nakamotor.io/",
+			},
+		],
 	},
 	{
 		id: "orangemart",
 		name: "Orange Mart",
 		avatar: "/img/orangemart.png",
 		description: "Just a humble shop in Orange.",
+		links: SOCIAL_LINKS,
 	},
 ];
 
