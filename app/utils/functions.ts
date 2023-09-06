@@ -70,3 +70,11 @@ export const intlNumFormat = function (num: number, locale = "en-US") {
 		maximumFractionDigits: 0,
 	}).format(num);
 };
+
+export const intlDateFormat = function (date: Date, locale = "en-US") {
+	return new Intl.DateTimeFormat(locale, {
+		year: "numeric",
+		month: "long",
+		day: "numeric",
+	}).format(date);
+};

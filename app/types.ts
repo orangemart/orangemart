@@ -29,6 +29,7 @@ export interface IPostCard {
 	description: string;
 	pubDate: string;
 	heroImage: string;
+	readingTime?: string;
 }
 
 export interface ITabBtn {
