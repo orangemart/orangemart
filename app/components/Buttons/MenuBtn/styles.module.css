@@ -1,0 +1,94 @@
+.menuBtn,
+.menuModal {
+  display: block;
+}
+
+.menuBtn {
+  cursor: pointer;
+}
+
+.menuModal {
+  background-color: var(--white);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 3;
+}
+
+.menuModalHead {
+  border-bottom: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  min-height: 100%;
+  height: 80px;
+  padding: var(--size-sm);
+}
+
+.menuModalBody {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--size-md) 0px;
+}
+
+.menuModal .menuModalLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.menuModal .menuLink,
+.menuModal .menuActiveLink,
+.menuModal .menuExternalLink {
+  border-bottom: 1px solid var(--lightest);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--medium);
+  font-size: 24px;
+  font-weight: 500;
+  min-height: 100%;
+  width: 100%;
+  text-decoration: none;
+  padding: var(--size-xs) var(--size-sm);
+}
+
+.menuModal .menuActiveLink {
+  color: var(--darkest);
+}
+
+.menuModal .menuLink:hover,
+.menuModal .menuActiveLink:hover,
+.menuModal .menuExternalLink:hover {
+  color: var(--darkest);
+}
+
+.menuModal .menuModalSocial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuModal .menuModalSocial a {
+  padding: var(--size-xs);
+}
+
+@media (min-width: 768px) {
+
+  .menuBtn,
+  .menuModal {
+    display: none;
+  }
+}

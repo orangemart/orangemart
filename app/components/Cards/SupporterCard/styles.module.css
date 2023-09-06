@@ -1,0 +1,38 @@
+.supporterCard {
+  border: 1px solid var(--light);
+  background-color: var(--white);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+  border-radius: var(--border-radius);
+  padding: var(--size-sm);
+}
+
+.supporterCardInfo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--size-sm);
+  width: 100%;
+  margin-bottom: var(--size-sm);
+}
+
+.supporterCard img {
+  border-radius: 50%;
+  border: 1px solid var(--light);
+}
+
+.supporterCard p {
+  font-size: 16px;
+  color: var(--dark);
+}
+
+.supporterCard h4 {
+  margin-bottom: var(--size-xs);
+}
+
+.supporterCardLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--size-xs);
+  width: 100%;
+}

@@ -1,0 +1,14 @@
+.postList {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  justify-content: space-between;
+  grid-gap: var(--size-xl);
+  width: 100%;
+}
+
+@media (min-width: 968px) {
+  .postList {
+    grid-template-columns: repeat(3, 4fr);
+  }
+}

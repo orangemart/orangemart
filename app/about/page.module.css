@@ -1,0 +1,45 @@
+.aboutPage {
+  padding: 120px 16px 40px 16px;
+}
+
+.aboutPage h1 {
+  margin-bottom: var(--size-md);
+}
+
+.aboutPage a {
+  font-weight: 600;
+}
+
+.aboutPage p {
+  margin-bottom: var(--size-sm);
+}
+
+.aboutPage img {
+  display: none;
+}
+
+.aboutPageContent {
+  grid-column: 1 / 9;
+}
+
+.aboutPagePanel {
+  grid-column: 9 / 13;
+}
+
+@media (min-width: 968px) {
+  .aboutPage {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    row-gap: 0;
+    column-gap: var(--size-xl);
+    padding: 160px 16px 80px 16px;
+  }
+
+  .aboutPage img {
+    display: block;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: var(--size-md);
+  }
+}

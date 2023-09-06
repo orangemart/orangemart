@@ -1,95 +1,109 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.css";
+import { PlayBtn, LinkBtn } from "./components/Buttons";
+import { PostCard } from "@/app/components/Cards";
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+import { IPostCard } from "./types";
+import { getAllPosts, sortPostsByDate } from "@/app/utils/functions";
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+const HomePage = async () => {
+	const data = await getAllPosts();
+	const posts = sortPostsByDate(data).slice(0, 3);
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+	return (
+		<div className="container">
+			<section className={styles.heroSection}>
+				<div className={styles.heroBackground}>
+					<Image
+						src="/img/hero.png"
+						alt="background"
+						className="cover"
+						blurDataURL="/img/hero.png"
+						placeholder="blur"
+						width={2620}
+						height={970}
+						priority
+					/>
+				</div>
+				<div className="wrapper">
+					<div className={styles.heroContent}>
+						<div>Play and Earn</div>
+						<div>
+							<h1>Your journey starts here</h1>
+							<p>
+								Learn about financial freedom in a fun and engaging way by playing your favorite
+								game RUST and earning real Bitcoin
+							</p>
+							<PlayBtn />
+						</div>
+					</div>
+				</div>
+			</section>
+			<section className={styles.aboutSection}>
+				<div className="wrapper">
+					<div className={styles.aboutWrapper}>
+						<div className={styles.aboutContent}>
+							<h2>We are Orange</h2>
+							<p>
+								Our objective is simple - we want to help people learn to survive and thrive with
+								Bitcoin. We recognize that Bitcoin is an essential tool for survival and believe a
+								great way to learn about it is by playing with it. Join our community to get
+								started.
+							</p>
+							<LinkBtn
+								id="join"
+								href="https://dsc.gg/orangemart"
+								label="Join community"
+								hasDefaultTarget={false}
+							/>
+						</div>
+						<div className={styles.aboutImage}>
+							<Image src="/img/flag.png" alt="flag" className="cover" width={400} height={225} />
+						</div>
+					</div>
+				</div>
+			</section>
+			<section className={styles.postsSection}>
+				<div className="wrapper">
+					<div className={styles.postsWrapper}>
+						<div className={styles.postsHead}>
+							<h2>Latest posts</h2>
+							<LinkBtn id="posts" href="/blog" label="View all" hasDefaultTarget={true} />
+						</div>
+						<div className={styles.postsBody}>
+							{posts.map((post: IPostCard) => {
+								return <PostCard key={post.slug} {...post} />;
+							})}
+						</div>
+					</div>
+				</div>
+			</section>
+			<section className={styles.videoSection}>
+				<div className="wrapper">
+					<div className={styles.videoWrapper}>
+						<div className={styles.videoContent}>
+							<h2>
+								At <span>Orange</span>
+								<span></span> anyone can play and earn Bitcoin
+							</h2>
+							<p>
+								Join the server and take the Bitcoin Repopulation Unit Survival Test (B.R.U.S.T)
+							</p>
+							<PlayBtn />
+						</div>
+						<div className={styles.videoImage}>
+							<iframe
+								width="560"
+								height="315"
+								src="https://www.youtube.com/embed/m3I9CWMRf4Y?si=mE7chiHzeWEcZCNy?controls=0&rel=0&iv_load_policy=0"
+								title="Welcome to Orange"
+								allowFullScreen></iframe>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	);
+};
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+export default HomePage;
