@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "Blog",
-	description: "",
+	keywords: "blog, posts, articles",
 };
 
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
