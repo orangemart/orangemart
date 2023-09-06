@@ -91,6 +91,16 @@ hr {
   margin: var(--size-xl) 0;
 }
 
+::selection {
+  color: var(--darkest);
+  background: hsla(34, 100%, 93%, 1);
+}
+
+::-moz-selection {
+  color: var(--darkest);
+  background: hsla(34, 100%, 93%, 1);
+}
+
 .main {
   width: 100%;
 }
