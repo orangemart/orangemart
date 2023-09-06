@@ -9,7 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "Orange",
-	description: "",
+	description:
+		"Learn about financial freedom in a fun and engaging way by playing your favorite game RUST and earning real Bitcoin",
+	keywords: "orange, rust, server, bitcoin",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
