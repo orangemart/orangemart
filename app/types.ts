@@ -52,6 +52,7 @@ export interface ISupporter {
 	name: string;
 	avatar: string;
 	description: string;
+	links?: any[];
 }
 
 export interface IContributor {
