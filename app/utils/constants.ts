@@ -1,4 +1,4 @@
-import { ILink, ILinkGroup, IAuthor } from "../types";
+import { ILink, ILinkGroup, ISupporter, IContributor } from "../types";
 
 export const RUST_SERVER_IP = "104.129.133.89:28116";
 
@@ -104,17 +104,208 @@ export const FOOTER_LINKS: ILinkGroup[] = [
 
 export const BLOG_TOPICS: string[] = ["all topics", "orange", "rust", "bitcoin"];
 
-export const AUTHORS: IAuthor[] = [
+export const DEFAULT_TOPIC = "all topics";
+
+export const SUPPORTERS: ISupporter[] = [
 	{
-		id: "orangemart",
-		name: "Orange Mart",
-		avatar: "/img/orangemart.png",
-		description: "Orange is a Rust developer and Bitcoiner.",
+		id: "geyser-contributors",
+		name: "Geyser Contributors",
+		avatar: "/img/geyser-contributers.png",
+		description: "The coolest people in the world.",
+		links: [
+			{
+				id: "twitter",
+				href: "https://twitter.com/i/lists/1627971768173608960",
+			},
+			{
+				id: "website",
+				href: "https://geyser.fund/orange",
+			},
+		],
+	},
+	{
+		id: "geyser-fund",
+		name: "Geyser Fund",
+		avatar: "/img/geyser-fund.png",
+		description: "Geyser is a lightning-native crowdfunding platform.",
+		links: [
+			{
+				id: "twitter",
+				href: "https://twitter.com/geyserfund",
+			},
+			{
+				id: "website",
+				href: "https://geyser.fund/",
+			},
+		],
+	},
+	{
+		id: "lightsats",
+		name: "Lightsats",
+		avatar: "/img/lightsats.png",
+		description:
+			"Gift sats without losing them.✨ Building a pre-coiner onramp via bitcoin tips/gifts.",
+		links: [
+			{
+				id: "twitter",
+				href: "https://twitter.com/Lightsats21",
+			},
+			{
+				id: "website",
+				href: "https://lightsats.com",
+			},
+		],
 	},
 	{
 		id: "good-morning-bitcoin",
 		name: "Good Morning Bitcoin",
 		avatar: "/img/goodmorningbitcoin.png",
 		description: "Internet radio station focused on Bitcoin content.",
+		links: [
+			{
+				id: "twitter",
+				href: "https://twitter.com/goodmorningbtc",
+			},
+			{
+				id: "website",
+				href: "https://goodmorningbitcoin.com/",
+			},
+		],
+	},
+	{
+		id: "nakamotor",
+		name: "Nakamotor",
+		avatar: "/img/nakamotor.png",
+		description: "Monetizing energy through Bitcoin mining.",
+		links: [
+			{
+				id: "twitter",
+				href: "https://twitter.com/nakamotor_",
+			},
+			{
+				id: "website",
+				href: "https://nakamotor.io/",
+			},
+		],
+	},
+	{
+		id: "orangemart",
+		name: "Orange Mart",
+		avatar: "/img/orangemart.png",
+		description: "Just a humble shop in Orange.",
+		links: SOCIAL_LINKS,
+	},
+];
+
+export const GEYSER_SUPPORTERS: IContributor[] = [
+	{
+		id: 1,
+		handle: "@cbspears",
+		value: 12000000,
+	},
+	{
+		id: 2,
+		handle: "@geyserfund",
+		value: 2342000,
+	},
+	{
+		id: 3,
+		handle: "@tip_nz",
+		value: 1007045,
+	},
+	{
+		id: 4,
+		handle: "@jamesviggy",
+		value: 1000000,
+	},
+	{
+		id: 5,
+		handle: "anon",
+		value: 529013,
+	},
+	{
+		id: 6,
+		handle: "@CivilBtcSaver",
+		value: 528756,
+	},
+	{
+		id: 7,
+		handle: "@bradmillscan",
+		value: 500000,
+	},
+	{
+		id: 8,
+		handle: "@HodlerHero23",
+		value: 413917,
+	},
+	{
+		id: 9,
+		handle: "anon",
+		value: 413534,
+	},
+	{
+		id: 10,
+		handle: "@lolo_streams",
+		value: 351506,
+	},
+	{
+		id: 11,
+		handle: "@bitcoinanatomy",
+		value: 265904,
+	},
+	{
+		id: 12,
+		handle: "@BitcoinShooter",
+		value: 250000,
+	},
+	{
+		id: 13,
+		handle: "anon",
+		value: 239181,
+	},
+	{
+		id: 14,
+		handle: "@Lightsats21",
+		value: 210000,
+	},
+	{
+		id: 15,
+		handle: "@liviudm",
+		value: 210000,
+	},
+	{
+		id: 16,
+		handle: "anon",
+		value: 183620,
+	},
+	{
+		id: 17,
+		handle: "anon",
+		value: 118726,
+	},
+	{
+		id: 18,
+		handle: "anon",
+		value: 100100,
+	},
+	{
+		id: 19,
+		handle: "@kiwilambnz",
+		value: 100000,
+	},
+	{
+		id: 20,
+		handle: "anon",
+		value: 100000,
+	},
+	{
+		id: 21,
+		handle: "anon",
+		value: 55779,
+	},
+	{
+		id: 22,
+		handle: "+40 more supporters",
+		value: 0,
 	},
 ];

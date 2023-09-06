@@ -17,5 +17,3 @@ export const JoinCard = () => {
 		</div>
 	);
 };
-
-export default JoinCard;

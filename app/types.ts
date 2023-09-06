@@ -39,15 +39,24 @@ export interface ITabBtn {
 			topic?: string;
 		};
 	};
+	isActive: boolean;
 }
 
 export interface IPostList {
 	posts: IPostCard[];
+	activeTab: string;
 }
 
-export interface IAuthor {
+export interface ISupporter {
 	id: string;
 	name: string;
 	avatar: string;
 	description: string;
+	links?: any[];
+}
+
+export interface IContributor {
+	id: number;
+	handle: string;
+	value: number;
 }

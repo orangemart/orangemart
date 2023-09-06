@@ -1,15 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import styles from "./styles.module.css";
 import { ITabBtn } from "@/app/types";
 
 export const TabBtn = (props: ITabBtn) => {
-	const searchParams = useSearchParams();
-	const search = searchParams.get("topic");
-	const { label, href } = props;
-	const isActive = search && search === label ? true : !search && label === "all topics";
+	const { label, href, isActive } = props;
 	const className = isActive ? styles.tagBtnActive : styles.tabBtn;
 
 	return (
@@ -18,5 +14,3 @@ export const TabBtn = (props: ITabBtn) => {
 		</Link>
 	);
 };
-
-export default TabBtn;

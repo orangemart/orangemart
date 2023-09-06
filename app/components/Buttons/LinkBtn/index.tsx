@@ -19,5 +19,3 @@ export const LinkBtn = (props: ILink) => {
 		</Link>
 	);
 };
-
-export default LinkBtn;

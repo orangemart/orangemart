@@ -6,7 +6,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--size-xs);
-  margin-bottom: var(--size-md);
+  margin-bottom: var(--size-xl);
 }
 
 .blogPage h1 {

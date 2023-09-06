@@ -13,5 +13,3 @@ export const PlayBtn = () => {
 		</Link>
 	);
 };
-
-export default PlayBtn;

@@ -30,5 +30,3 @@ export const PostCard = (props: IPostCard) => {
 		</div>
 	);
 };
-
-export default PostCard;

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import styles from "./styles.module.css";
 
-export const Logo = () => {
+const Logo = () => {
 	return (
 		<Link href="/" className={styles.logo}>
 			<Image src="/img/tangerine.png" alt="logo" width={32} height={32} />

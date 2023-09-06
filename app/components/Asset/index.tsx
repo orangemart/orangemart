@@ -2,18 +2,22 @@ import styles from "./styles.module.css";
 
 import { IAsset } from "@/app/types";
 
-import { MenuIcon } from "@/app/components/Icons/MenuIcon";
-import { CloseIcon } from "@/app/components/Icons/CloseIcon";
-import { ArrowRightIcon } from "@/app/components/Icons/ArrowRightIcon";
-import { YoutubeIcon } from "@/app/components/Icons/YoutubeIcon";
-import { TwitterIcon } from "@/app/components/Icons/TwitterIcon";
-import { TwitchIcon } from "@/app/components/Icons/TwitchIcon";
-import { NostrIcon } from "@/app/components/Icons/NostrIcon";
-import { TikTokIcon } from "@/app/components/Icons/TikTokIcon";
-import { DiscordIcon } from "@/app/components/Icons/DiscordIcon";
+import { MenuIcon } from "@/app/components/Icons";
+import { CloseIcon } from "@/app/components/Icons";
+import { ArrowRightIcon } from "@/app/components/Icons";
+import { YoutubeIcon } from "@/app/components/Icons";
+import { TwitterIcon } from "@/app/components/Icons";
+import { TwitchIcon } from "@/app/components/Icons";
+import { NostrIcon } from "@/app/components/Icons";
+import { TikTokIcon } from "@/app/components/Icons";
+import { DiscordIcon } from "@/app/components/Icons";
+import { TangerineIcon } from "@/app/components/Icons";
+import { GlobalIcon } from "@/app/components/Icons";
 
 const renderAssetByName = (name: string, color: string) => {
 	switch (name) {
+		case "tangerine":
+			return <TangerineIcon color={color} />;
 		case "menu":
 			return <MenuIcon color={color} />;
 		case "close":
@@ -32,6 +36,8 @@ const renderAssetByName = (name: string, color: string) => {
 			return <NostrIcon color={color} />;
 		case "discord":
 			return <DiscordIcon color={color} />;
+		case "website":
+			return <GlobalIcon color={color} />;
 		default:
 			return null;
 	}
