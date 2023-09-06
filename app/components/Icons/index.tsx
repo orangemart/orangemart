@@ -8,3 +8,4 @@ export { NostrIcon } from "./NostrIcon";
 export { TikTokIcon } from "./TikTokIcon";
 export { DiscordIcon } from "./DiscordIcon";
 export { TangerineIcon } from "./TangerineIcon";
+export { GlobalIcon } from "./GlobalIcon";
