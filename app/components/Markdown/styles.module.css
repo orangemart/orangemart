@@ -6,7 +6,7 @@
 }
 
 .markdown h1 {
-  font-size: 44px;
+  font-size: 32px;
   margin-top: 0px;
   margin-bottom: var(--size-lg);
 }
@@ -149,5 +149,9 @@
     column-gap: var(--size-xl);
     place-items: center;
     padding: 160px 16px 80px 16px;
+  }
+
+  .markdown h1 {
+    font-size: 44px;
   }
 }
