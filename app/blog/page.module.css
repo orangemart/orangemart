@@ -1,5 +1,5 @@
 .blogPage {
-  padding: 160px 16px 80px 16px;
+  padding: 120px 16px 80px 16px;
 }
 
 .blogPageTopics {
@@ -11,4 +11,10 @@
 
 .blogPage h1 {
   margin-bottom: var(--size-md);
+}
+
+@media (min-width: 968px) {
+  .blogPage {
+    padding: 160px 16px 80px 16px;
+  }
 }
