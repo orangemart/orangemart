@@ -107,23 +107,7 @@ export const BLOG_TOPICS: string[] = ["all topics", "orange", "rust", "bitcoin"]
 export const DEFAULT_TOPIC = "all topics";
 
 export const SUPPORTERS: ISupporter[] = [
-	{
-		id: "geyser-contributors",
-		name: "Geyser Contributors",
-		avatar: "/img/geyser-contributers.png",
-		description: "The coolest people in the world.",
-		links: [
-			{
-				id: "twitter",
-				href: "https://twitter.com/i/lists/1627971768173608960",
-			},
-			{
-				id: "website",
-				href: "https://geyser.fund/orange",
-			},
-		],
-	},
-	{
+		{
 		id: "geyser-fund",
 		name: "Geyser Fund",
 		avatar: "/img/geyser-fund.png",
@@ -135,7 +119,7 @@ export const SUPPORTERS: ISupporter[] = [
 			},
 			{
 				id: "website",
-				href: "https://geyser.fund/",
+				href: "https://geyser.fund/orange",
 			},
 		],
 	},
@@ -187,6 +171,22 @@ export const SUPPORTERS: ISupporter[] = [
 				href: "https://nakamotor.io/",
 			},
 		],
+	},
+	{
+		id: "standard-and-moons",
+		name:"Standard & Moons",
+		avatar: "/img/standardandmoons.png",
+		description: "Innovate the standard & reach for the moons.",
+		links: [
+			{
+				id: "twitter",
+				href: "https://twitter.com/standardandmoon",
+			},
+			{
+				id: "website",
+				href: "https://www.standardandmoons.com/",
+			}
+		]
 	},
 	{
 		id: "orangemart",
