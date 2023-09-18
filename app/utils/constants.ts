@@ -245,67 +245,67 @@ export const GEYSER_SUPPORTERS: IContributor[] = [
 	},
 	{
 		id: 10,
+		handle: "@JoanaCotar",
+		value: 376896
+	},
+	{
+		id: 11,
 		handle: "@lolo_streams",
 		value: 351506,
 	},
 	{
-		id: 11,
+		id: 12,
 		handle: "@bitcoinanatomy",
 		value: 265904,
 	},
 	{
-		id: 12,
+		id: 13,
 		handle: "@BitcoinShooter",
 		value: 250000,
 	},
 	{
-		id: 13,
+		id: 14,
 		handle: "anon",
 		value: 239181,
 	},
 	{
-		id: 14,
+		id: 15,
 		handle: "@Lightsats21",
 		value: 210000,
 	},
 	{
-		id: 15,
+		id: 16,
 		handle: "@liviudm",
 		value: 210000,
 	},
 	{
-		id: 16,
+		id: 17,
 		handle: "anon",
 		value: 183620,
 	},
 	{
-		id: 17,
+		id: 18,
 		handle: "anon",
 		value: 118726,
 	},
 	{
-		id: 18,
+		id: 19,
 		handle: "anon",
 		value: 100100,
 	},
 	{
-		id: 19,
-		handle: "@kiwilambnz",
-		value: 100000,
-	},
-	{
 		id: 20,
-		handle: "anon",
+		handle: "@kiwilambnz",
 		value: 100000,
 	},
 	{
 		id: 21,
 		handle: "anon",
-		value: 55779,
+		value: 100000,
 	},
 	{
 		id: 22,
-		handle: "+40 more supporters",
+		handle: "+50 more supporters",
 		value: 0,
 	},
 ];
