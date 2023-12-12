@@ -12,8 +12,8 @@ const SupportersPage = () => {
 					<div className={styles.supportersPageMsg}>
 						<h1>Thank you!</h1>
 						<p>
-							Orange is a community project. We are grateful for all the support we received from
-							our community.
+							Orange is a community project. We are grateful for all the support we receive from
+							the community.
 						</p>
 						<LinkBtn
 							id="contribute"
