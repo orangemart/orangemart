@@ -6,7 +6,7 @@ export const PlayBtn = () => {
 	return (
 		<Link
 			className={styles.playBtn}
-			href={`steam://connect/${RUST_SERVER_IP}`}
+			href={`steam://run/252490//+connect ${RUST_SERVER_IP}`}
 			target="_blank"
 			rel="noreferrer">
 			Play now
