@@ -201,12 +201,12 @@ export const GEYSER_SUPPORTERS: IContributor[] = [
 	{
 		id: 1,
 		handle: "@cbspears",
-		value: 12000000,
+		value: 15675000,
 	},
 	{
 		id: 2,
 		handle: "@geyserfund",
-		value: 2342000,
+		value: 2365000,
 	},
 	{
 		id: 3,
@@ -250,7 +250,7 @@ export const GEYSER_SUPPORTERS: IContributor[] = [
 	},
 	{
 		id: 11,
-		handle: "@lolo_streams",
+		handle: "@_lolo_spears_",
 		value: 351506,
 	},
 	{
@@ -276,7 +276,7 @@ export const GEYSER_SUPPORTERS: IContributor[] = [
 	{
 		id: 16,
 		handle: "@Lightsats21",
-		value: 210000,
+		value: 231000,
 	},
 	{
 		id: 17,
@@ -305,7 +305,7 @@ export const GEYSER_SUPPORTERS: IContributor[] = [
 	},
 	{
 		id: 22,
-		handle: "+77 more supporters",
+		handle: "+81 more supporters",
 		value: 0,
 	},
 ];
