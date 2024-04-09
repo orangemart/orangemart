@@ -1,6 +1,6 @@
 import { ILink, ILinkGroup, ISupporter, IContributor } from "../types";
 
-export const RUST_SERVER_IP = "104.129.133.89:28119";
+export const RUST_SERVER_IP = "64.40.8.29:28066";
 
 export const NAV_LINKS: ILink[] = [
 	{

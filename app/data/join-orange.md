@@ -35,7 +35,7 @@ Alternatively, you can open the console by pressing F1 while in Rust and directl
 server by typing the following command:
 
 ```
-client.connect 104.129.133.89:28119
+client.connect 64.40.8.29:28066
 ```
 
 ![Rust Server Search Find Orange](https://i.postimg.cc/0QG46gv8/searchorange.jpg)
