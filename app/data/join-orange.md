@@ -31,7 +31,7 @@ To find the Orange server in the modded category of Rust, perform the following 
 - When you find the Orange server, add it to your favourites to easily access it in the future.
 - Join the Orange server to start playing!
 
-Alternatively, you can open the console by pressing F1 while in Rust and directly connect to the
+Alternatively, you can open the rust console by pressing F1 and directly connect to the
 server by typing the following command:
 
 ```

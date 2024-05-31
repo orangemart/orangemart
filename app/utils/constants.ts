@@ -39,7 +39,7 @@ export const SOCIAL_LINKS: ILink[] = [
 	{
 		id: "nostr",
 		label: "Nostr",
-		href: "https://satellite.earth/@orange@orangem.art",
+		href: "https://nosta.me/nprofile1qyv8wumn8ghj7mn0wd68ytnxd46zuamf0ghxy6t69uqsuamnwvaz7tmwdaejumr0dshsqgq6mr6axhhw7fxad6xe8ujtakexea9sw2nvzd4umkff8mxmkcjysck8k6ma",
 		hasDefaultTarget: false,
 	},
 	{
@@ -102,7 +102,7 @@ export const FOOTER_LINKS: ILinkGroup[] = [
 	},
 ];
 
-export const BLOG_TOPICS: string[] = ["all topics", "orange", "rust", "bitcoin"];
+export const BLOG_TOPICS: string[] = ["all topics", "orange", "rust", "bitcoin", "nostr"];
 
 export const DEFAULT_TOPIC = "all topics";
 
@@ -190,7 +190,7 @@ export const SUPPORTERS: ISupporter[] = [
 	},
 	{
 		id: "orangemart",
-		name: "Orange Mart",
+		name: "ORANGEMART",
 		avatar: "/img/orangemart.png",
 		description: "Just a humble shop in Orange.",
 		links: SOCIAL_LINKS,
@@ -211,7 +211,7 @@ export const GEYSER_SUPPORTERS: IContributor[] = [
 	{
 		id: 3,
 		handle: "@tip_nz",
-		value: 1010585,
+		value: 1031585,
 	},
 	{
 		id: 4,
