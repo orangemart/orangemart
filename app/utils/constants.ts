@@ -1,6 +1,6 @@
 import { ILink, ILinkGroup, ISupporter, IContributor } from "../types";
 
-export const RUST_SERVER_IP = "orange.orangem.art:28066";
+export const RUST_SERVER_IP = "orange.orangem.art:28285";
 
 export const NAV_LINKS: ILink[] = [
 	{

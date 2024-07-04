@@ -35,7 +35,7 @@ Alternatively, you can open the rust console by pressing F1 and directly connect
 server by typing the following command:
 
 ```
-client.connect 64.40.8.29:28066
+client.connect orange.orangem.art:28285
 ```
 
 ![Rust Server Search Find Orange](https://i.postimg.cc/0QG46gv8/searchorange.jpg)
