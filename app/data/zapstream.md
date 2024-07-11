@@ -91,3 +91,5 @@ Before going live, it’s a good idea to test your stream quality using OBS’s 
 #### Conclusion
 
 Streaming your gameplay and earning bitcoin has never been easier. With zap.stream and OBS, you can set up and start streaming in just a few steps. Plus, with zap.stream's re-streaming feature, you can effortlessly expand your audience across multiple platforms. Follow this guide, and you’ll be live in no time, sharing your gaming skills with the world and earning bitcoin along the way. Happy streaming!
+
+If you liked this post you could consider [zapping us some sats over on nostr.](https://habla.news/u/orangemart@snort.social/zapstream)
