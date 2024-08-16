@@ -14,7 +14,9 @@ We are thrilled to announce an open-source project opportunity to create a plugi
 ### About the Project
 Our goal is to develop a uMod (oxide) plugin that leverages NWC, as outlined in [NIP-47](https://github.com/nostr-protocol/nips/blob/master/47.md) of the Nostr protocol. If you’re new to Nostr, check out our detailed post [here](https://www.orangem.art/blog/nostr) to get started and learn more about the protocol [here](https://nostr.org/). NWC documentation is available [here](https://docs.nwc.dev/), and you can join the NWC developer Discord [here](https://discord.gg/PRhQPZCmeF).
 
-The plugin will be server-side, built using the .NET Framework, and written in C#. Utilizing uMod’s capabilities, the plugin will dynamically enhance game functionality without requiring any client modifications. You can find uMod documentation [here](https://umod.org/documentation/api/overview) and join the uMod/Oxide developer Discord [here](https://discord.gg/HdhSD8aBXD).
+The plugin will be server-side, built using the .NET Framework, and written in C#. Utilizing uMod’s capabilities, the plugin will dynamically enhance game functionality without requiring any client modifications. You can find uMod documentation [here](https://umod.org/documentation/api/overview) and join the uMod/Oxide developer Discord [here](https://discord.gg/HdhSD8aBXD), check out these guides from [@thethingtracks](https://medium.com/@thethingtracks/simple-rust-plugin-template-a0f405da8f64) and [kwamaking](https://github.com/kwamaking/rust-plugin-development). There is some NWC support in [NNostr](https://github.com/Kukks/NNostr) which is written in C# and could be a useful reference point. 
+
+"The cool thing with NWC is that it's quite easy to implement, no matter which language / tech stack you are using. It's basically sending some (signed & encrypted) JSON messages over a websocket connection." - [@reneaaron](https://stacker.news/items/640244/r/TheOrangeMart?commentId=640348) 
 
 ### Initial Use Case
 **Server Wallet Integration:**
@@ -39,17 +41,20 @@ The plugin will be server-side, built using the .NET Framework, and written in C
    - The plugin deletes the specified amount of blood (currency item) from the player's inventory.
    - Using NWC, the plugin sends sats from the server's wallet to the destination address.
 
-### Future Expansion
+### Future Expansion Ideas
 **Player-to-Player Commerce:**
-- Expand the plugin to allow players to input their NWC connection pairing secret.
-- Enable the plugin to handle P2P commerce, enhancing in-game trading mechanics like the Vending Machine and less reliance on an in-game currency item. 
+- Enable the plugin to handle P2P commerce, enhancing in-game trading mechanics like the Vending Machine and less reliance on an in-game currency item. Possibly by allowing players to input their NWC connection pairing secret.
+
+**Embedded Wallet:**
+- Utilize the Alby Hub's new isolated apps feature to give all players an embedded wallet. Join the Alby discord [here](https://discord.gg/4a79bPPgBW).
 
 ### Example Development Tasks:
-- Develop the plugin as a C# code file.
+- Develop the plugin as a C# code file. 
 - Ensure the plugin generates a JSON configuration file for customization.
 - Implement chat commands for buying and selling in-game currency.
 - Handle errors and notify players in chat with the lightning invoice.
 - Check invoice status and handle unsuccessful payments.
+- Submit Pull request to [orangemart.cs](https://github.com/orangemart/orangemart.cs)
 
 ### Why Join Us?
 We have set aside **1 million sats ($650 USD at today’s value)** for the initial development and ongoing support of this plugin. Orangemart’s proof of funds can be found at our [Geyser Fundraiser](https://geyser.fund/project/orange), where we have received over **25 million sats** in donations from over 100 contributors. Additionally, proof of our disbursement of these funds to our community is available on the [Lightsats leaderboard](https://lightsats.com/leaderboard), where we have gifted over **10 million sats** in over 7000 prizes to our community.
