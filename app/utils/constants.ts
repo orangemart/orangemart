@@ -16,6 +16,12 @@ export const NAV_LINKS: ILink[] = [
 		hasDefaultTarget: true,
 	},
 	{
+		id: "tv",
+		label: "TV",
+		href: "http://orangemart.tv",
+		hasDefaultTarget: true,
+	},
+	{
 		id: "supporters",
 		label: "Supporters",
 		href: "/supporters",
