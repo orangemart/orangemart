@@ -18,7 +18,7 @@ export const NAV_LINKS: ILink[] = [
 	{
 		id: "tv",
 		label: "TV",
-		href: "https://zap.stream/orangemart",
+		href: "https://zap.stream/p/npub1rtv0t567ameym4hgmyljf0kmym85kpe2dsfkhnwe9ylvmwmzgjrqc4e7y7",
 		hasDefaultTarget: true,
 	},
 	{
