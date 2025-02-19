@@ -1,3 +1,11 @@
+.buttonContainer {
+  display: flex;
+  gap: 12px; /* Space between buttons */
+  justify-content: center; /* Center the buttons */
+  align-items: center;
+  flex-wrap: wrap; /* Wrap buttons if the screen is too small */
+  margin-top: 20px;
+}
 .playBtn {
   background-color: var(--primary);
   border: 1px solid var(--primary);
@@ -9,4 +17,11 @@
   padding: var(--size-xs) var(--size-sm);
   text-decoration: none;
   text-align: center;
+  min-width: 140px; /* Ensure buttons are evenly sized */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.playBtn:hover {
+  background-color: var(--secondary); /* Use a secondary color on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }

@@ -1,6 +1,6 @@
 import { ILink, ILinkGroup, ISupporter, IContributor } from "../types";
 
-export const RUST_SERVER_IP = "orange.orangem.art";
+export const RUST_SERVER_IP = "mandarin.orangem.art";
 
 export const NAV_LINKS: ILink[] = [
 	{
@@ -39,7 +39,7 @@ export const SOCIAL_LINKS: ILink[] = [
 	{
 		id: "discord",
 		label: "Discord",
-		href: "https://dsc.gg/orangemart",
+		href: "https://discord.gg/EcvrfUnScF",
 		hasDefaultTarget: false,
 	},
 	{
@@ -207,7 +207,7 @@ export const GEYSER_SUPPORTERS: IContributor[] = [
 	{
 		id: 1,
 		handle: "@cbspears",
-		value: 15675000,
+		value: 15696000,
 	},
 	{
 		id: 2,
@@ -222,7 +222,7 @@ export const GEYSER_SUPPORTERS: IContributor[] = [
 	{
 		id: 4,
 		handle: "@jamesviggy",
-		value: 1003678,
+		value: 1004560,
 	},
 	{
 		id: 5,

@@ -1,15 +1,33 @@
-import Link from "next/link";
 import styles from "./styles.module.css";
 import { RUST_SERVER_IP } from "@/app/utils/constants";
 
 export const PlayBtn = () => {
-	return (
-		<Link
-			className={styles.playBtn}
-			href={`steam://run/252490//+connect ${RUST_SERVER_IP}`}
-			target="_blank"
-			rel="noreferrer">
-			Play now
-		</Link>
-	);
+  return (
+    <div className={styles.buttonContainer}>
+      <a
+        href="https://store.steampowered.com/app/252490/Rust/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.playBtn}
+      >
+        Install
+      </a>
+
+      <a
+        href={`steam://connect/${RUST_SERVER_IP}`}
+        className={styles.playBtn}
+      >
+        Connect
+      </a>
+
+      <a
+        href="https://discord.gg/YOUR_DISCORD_INVITE"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.playBtn}
+      >
+        Contact
+      </a>
+    </div>
+  );
 };
