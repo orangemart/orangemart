@@ -21,7 +21,7 @@ export const PlayBtn = () => {
       </a>
 
       <a
-        href="https://discord.gg/YOUR_DISCORD_INVITE"
+        href="https://discord.gg/EcvrfUnScF"
         target="_blank"
         rel="noopener noreferrer"
         className={styles.playBtn}
