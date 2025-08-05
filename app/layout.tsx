@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next"
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import PopupAd from "./components/PopupAd";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,11 +20,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<Header />
-				<main className="main">{children}</main>
-				<Footer />
-				<Analytics />
-			</body>
+  <div className="flex flex-col min-h-screen">
+    <Header />
+    <main className="flex-grow">
+      {children}
+    </main>
+    <Footer />
+  </div>
+  <PopupAd />
+  <Analytics />
+</body>
+
 		</html>
 	);
 }
