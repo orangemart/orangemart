@@ -140,3 +140,49 @@ hr {
   object-fit: cover;
   object-position: center;
 }
+
+:root {
+  /* existing tokens unchanged ... */
+}
+
+/* Dark theme values (opt-in with .dark on <html> or <body>) */
+.dark {
+  --white:    #0E1117; /* paper dark */
+  --lightest: #161B22;
+  --light:    #2A2F37;
+  --medium:   #9CA3AF;
+  --dark:     #E5E7EB;
+  --darkest:  #FFFFFF;
+}
+
+/* Base text/background from tokens (keeps other pages consistent) */
+html, body {
+  background-color: var(--white);
+  color: var(--darkest);
+}
+
+/* Reusable lightweight helpers */
+.btn {
+  display:inline-flex;align-items:center;gap:.5rem;
+  padding:.4rem .75rem;border-radius:12px;
+  border:1px solid var(--primary); font-weight:600;
+  color:#7a3a00; /* legible on light bg */
+}
+.dark .btn { color:#FFD9A6; }
+.btn:hover { background-color: rgba(255,153,17,.08); }
+
+.card {
+  background-color: var(--white);
+  border:1px solid var(--light);
+  border-radius:16px;
+}
+
+.badge {
+  display:inline-flex;align-items:center;
+  padding:.15rem .5rem;border-radius:999px;
+  font-size:12px;font-weight:600;
+  border:1px solid var(--light);
+}
+.badge--ok    { color:#0a7c5b; background:rgba(16,185,129,.10); border-color:rgba(16,185,129,.35); }
+.badge--hold  { color:#8a6a0a; background:rgba(245,158,11,.12); border-color:rgba(245,158,11,.35); }
+.badge--off   { color:#6b7280; background:rgba(107,114,128,.10); border-color:rgba(107,114,128,.35); }

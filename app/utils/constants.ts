@@ -16,9 +16,9 @@ export const NAV_LINKS: ILink[] = [
 		hasDefaultTarget: true,
 	},
 	{
-		id: "tv",
-		label: "TV",
-		href: "https://zap.stream/p/npub1rtv0t567ameym4hgmyljf0kmym85kpe2dsfkhnwe9ylvmwmzgjrqc4e7y7",
+		id: "domains",
+		label: "Domains",
+		href: "/domains",
 		hasDefaultTarget: true,
 	},
 	{
@@ -91,6 +91,12 @@ export const RESOURCE_LINKS: ILink[] = [
 		id: "rust",
 		label: "Rust",
 		href: "https://rust.facepunch.com/",
+		hasDefaultTarget: false,
+	},
+	{
+		id: "rusthelp",
+		label: "Rust Help",
+		href: "https://rusthelp.com/",
 		hasDefaultTarget: false,
 	},
 ];
