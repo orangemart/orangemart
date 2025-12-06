@@ -51,27 +51,29 @@ export default function DomainLeasePage() {
 
   const filtered = React.useMemo(() => {
     const q = query.trim().toLowerCase();
-    // Guard against INVENTORY being undefined during hot-reloads or build issues.
     if (!Array.isArray(INVENTORY)) {
       return [];
     }
-    let rows = INVENTORY.filter((d) => (status ? (d.status ?? "available") === status : true));
-    if (q) {
-      rows = rows.filter((d) =>
-        [d.name, d.category, d.notes]
-          .filter(Boolean)
-          .some((v) => String(v).toLowerCase().includes(q))
-      );
-    }
-    rows.sort((a, b) => {
-      if (sortBy === "price") {
-        const ap = a.monthly ?? a.buyNow ?? Infinity;
-        const bp = b.monthly ?? b.buyNow ?? Infinity;
-        return ap - bp;
-      }
-      return a.name.localeCompare(b.name);
-    });
-    return rows;
+
+    return INVENTORY
+      .filter((d) => {
+        // Status filter
+        return !status || (d.status ?? "available") === status;
+      })
+      .filter((d) => {
+        // Query filter
+        if (!q) return true;
+        return [d.name, d.category, d.notes]
+          .filter(Boolean).some((v) => String(v).toLowerCase().includes(q));
+      })
+      .sort((a, b) => {
+        if (sortBy === "price") {
+          const priceA = a.monthly ?? a.buyNow ?? Infinity;
+          const priceB = b.monthly ?? b.buyNow ?? Infinity;
+          return priceA - priceB;
+        }
+        return a.name.localeCompare(b.name);
+      });
   }, [query, status, sortBy]);
 
   const contactHref = `mailto:orangemart@orangem.art?subject=${encodeURIComponent(
@@ -173,36 +175,8 @@ export default function DomainLeasePage() {
                     {formatSats(d.monthly)}
                   </Td>
                   <Td label="Buy" alignRight>{formatSats(d.buyNow)}</Td>
-                  <Td label="Status">
-                    {((): React.ReactNode => {
-                      const currentStatus = d.status ?? "available";
-                      return (
-                        <span
-                          className={classNames(
-                            "inline-flex items-center rounded-full px-2 py-1 text-xs font-medium",
-                            currentStatus === "available" && "bg-emerald-500/10 text-emerald-400 border border-emerald-500/30",
-                            currentStatus === "on hold" && "bg-amber-500/10 text-amber-400 border border-amber-500/30",
-                            currentStatus === "unavailable" && "bg-zinc-600/20 text-zinc-400 border border-zinc-500/30"
-                          )}
-                        >{currentStatus}</span>
-                      );
-                    })()}
-                  </Td>
-                  <Td label="Action">
-                    {((): React.ReactNode => {
-                      const currentStatus = d.status ?? "available";
-                      if (currentStatus === "available") {
-                        return (
-                          <div className="flex flex-wrap gap-2">
-                            <a href={mailtoFor(d, "rent")} className="btn">Rent</a>
-                            {typeof d.buyNow === "number" && <a href={mailtoFor(d, "buy")} className="btn subtle">Buy</a>}
-                          </div>
-                        );
-                      }
-                      // For "leased" or "on hold"
-                      return <a href={mailtoFor(d, "ask")} className="btn subtle">Ask</a>;
-                    })()}
-                  </Td>
+                  <Td label="Status"><DomainStatusBadge status={d.status} /></Td>
+                  <Td label="Action"><DomainActionButtons domain={d} /></Td>
                 </tr>
               ))
             ) : (
@@ -245,6 +219,41 @@ export default function DomainLeasePage() {
 }
 
 // ---- Small components ------------------------------------------------------
+
+function DomainStatusBadge({ status }: { status: DomainItem["status"] }) {
+  const currentStatus = status ?? "available";
+  const statusClasses = {
+    available: "bg-emerald-500/10 text-emerald-400 border border-emerald-500/30",
+    "on hold": "bg-amber-500/10 text-amber-400 border border-amber-500/30",
+    unavailable: "bg-zinc-600/20 text-zinc-400 border border-zinc-500/30",
+  };
+
+  return (
+    <span
+      className={classNames(
+        "inline-flex items-center rounded-full px-2 py-1 text-xs font-medium",
+        statusClasses[currentStatus]
+      )}
+    >
+      {currentStatus}
+    </span>
+  );
+}
+
+function DomainActionButtons({ domain }: { domain: DomainItem }) {
+  const currentStatus = domain.status ?? "available";
+
+  if (currentStatus === "available") {
+    return (
+      <div className="flex flex-wrap gap-2">
+        <a href={mailtoFor(domain, "rent")} className="btn">Rent</a>
+        {typeof domain.buyNow === "number" && <a href={mailtoFor(domain, "buy")} className="btn subtle">Buy</a>}
+      </div>
+    );
+  }
+  return <a href={mailtoFor(domain, "ask")} className="btn subtle">Ask</a>;
+}
+
 function OfferCard({ title, blurb, bullets, highlight }: { title: string; blurb: string; bullets: string[]; highlight?: boolean }) {
   return (
     <div
